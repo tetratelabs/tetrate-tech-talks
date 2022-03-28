@@ -1,6 +1,6 @@
 
 <center>
-<img src="/assets/logo.jpg" width="300" alt="Tetrate Tech Talks Logo">
+<img src="assets/logo.jpg" width="300" alt="Tetrate Tech Talks Logo">
 </center>
 
 Welcome to Tetrate Tech Talks, a weekly livestream where we feature a conversation with a guest to discuss technology, technical demonstrations and more.
