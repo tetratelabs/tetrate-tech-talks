@@ -23,5 +23,4 @@ Bring your questions!
 
 ## When
 
-2022.04.01 @ 9:00 AM Pacific
-
+Friday 2022.04.01 @ 9:00 AM Pacific time
