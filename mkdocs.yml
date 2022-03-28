@@ -1,5 +1,5 @@
 site_name: Tetrate Tech Talks
-repo_url: https://github.com/tetrateio/tetrate-tech-talks
+repo_url: https://github.com/tetratelabs/tetrate-tech-talks
 theme:
   name: material
   custom_dir: overrides
