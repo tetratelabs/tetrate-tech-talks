@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>Demo - Tetrate Tech Talks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connect-vm-workloads-to-istio-mesh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tetrate Tech Talks" class="md-header__button md-logo" aria-label="Tetrate Tech Talks" data-md-component="logo">
+      <img id="logo_light_mode" src="../../assets/tetrate-logo-white.png" alt="logo">
+<img id="logo_dark_mode" src="../../assets/tetrate-logo-black.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tetrate Tech Talks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Demo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tetratelabs/tetrate-tech-talks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tetrate Tech Talks" class="md-nav__button md-logo" aria-label="Tetrate Tech Talks" data-md-component="logo">
+      <img id="logo_light_mode" src="../../assets/tetrate-logo-white.png" alt="logo">
+<img id="logo_dark_mode" src="../../assets/tetrate-logo-black.png" alt="logo">
+
+    </a>
+    Tetrate Tech Talks
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tetratelabs/tetrate-tech-talks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Episode 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Episode 1" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Episode 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Description
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Demo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Demo
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-k8s-cluster" class="md-nav__link">
+    Create K8s Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-vm" class="md-nav__link">
+    Create the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-ratings-app-on-the-vm" class="md-nav__link">
+    Install ratings app on the VM
+  </a>
+  
+    <nav class="md-nav" aria-label="Install ratings app on the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-pod-to-vm-traffic-on-port-9080" class="md-nav__link">
+    Allow POD-to-VM traffic on port 9080
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-istio" class="md-nav__link">
+    Install Istio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-bookinfo-sans-ratings" class="md-nav__link">
+    Deploy BookInfo (sans ratings)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-east-west-gateway-and-expose-istiod" class="md-nav__link">
+    Install east-west gateway and expose Istiod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-ratings-namespace-and-service-account" class="md-nav__link">
+    Create the ratings namespace and service account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-workloadgroup" class="md-nav__link">
+    Create the WorkloadGroup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-vm-artifacts" class="md-nav__link">
+    Generate VM artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-configuration-recipe" class="md-nav__link">
+    VM configuration recipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    Exercise 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    Exercise 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    Exercise 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#put-it-all-together" class="md-nav__link">
+    Put it all together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-k8s-cluster" class="md-nav__link">
+    Create K8s Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-vm" class="md-nav__link">
+    Create the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-ratings-app-on-the-vm" class="md-nav__link">
+    Install ratings app on the VM
+  </a>
+  
+    <nav class="md-nav" aria-label="Install ratings app on the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-pod-to-vm-traffic-on-port-9080" class="md-nav__link">
+    Allow POD-to-VM traffic on port 9080
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-istio" class="md-nav__link">
+    Install Istio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-bookinfo-sans-ratings" class="md-nav__link">
+    Deploy BookInfo (sans ratings)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-east-west-gateway-and-expose-istiod" class="md-nav__link">
+    Install east-west gateway and expose Istiod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-ratings-namespace-and-service-account" class="md-nav__link">
+    Create the ratings namespace and service account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-workloadgroup" class="md-nav__link">
+    Create the WorkloadGroup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-vm-artifacts" class="md-nav__link">
+    Generate VM artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-configuration-recipe" class="md-nav__link">
+    VM configuration recipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    Exercise 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    Exercise 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    Exercise 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#put-it-all-together" class="md-nav__link">
+    Put it all together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/tetratelabs/tetrate-tech-talks/edit/master/docs/episode1/demo/index.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="connect-vm-workloads-to-istio-mesh">Connect VM Workloads to Istio mesh<a class="headerlink" href="#connect-vm-workloads-to-istio-mesh" title="Permanent link">&para;</a></h1>
+<p>This document is a recipe illustrating Istio mesh expansion using a single network and a single cluster.</p>
+<p>We install Istio and deploy all <a href="https://istio.io/latest/docs/examples/bookinfo/">BookInfo</a> services to the mesh, with the exception of the ratings service, which will run separately on a VM.</p>
+<p>The idea is to make this work, and thereby to demonstrate that Istio supports a mesh where some services run in-cluster and some outside it.</p>
+<p>The artifacts referenced in these instructions can be obtained from the GitHub repository for this site.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A GCP or other cloud account</li>
+</ul>
+<h2 id="create-k8s-cluster">Create K8s Cluster<a class="headerlink" href="#create-k8s-cluster" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./scripts/make-gke-cluster
+</code></pre></div>
+<p>Wait until cluster is ready.</p>
+<h2 id="create-the-vm">Create the VM<a class="headerlink" href="#create-the-vm" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gcloud compute instances create my-mesh-vm --tags<span class="o">=</span>mesh-vm <span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  --machine-type<span class="o">=</span>n1-standard-2 <span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  --network<span class="o">=</span>default --subnet<span class="o">=</span>default <span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  --image-project<span class="o">=</span>ubuntu-os-cloud <span class="se">\</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  --image<span class="o">=</span>ubuntu-2110-impish-v20220309
+</code></pre></div>
+<h2 id="install-ratings-app-on-the-vm">Install ratings app on the VM<a class="headerlink" href="#install-ratings-app-on-the-vm" title="Permanent link">&para;</a></h2>
+<p>Wait for the machine to be ready.</p>
+<ol>
+<li>
+<p>Copy over the ratings app</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gcloud compute scp --recurse bookinfo/ratings ubuntu@my-mesh-vm:ratings
+</code></pre></div>
+</li>
+<li>
+<p>ssh onto the VM</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gcloud compute ssh ubuntu@my-mesh-vm
+</code></pre></div>
+</li>
+<li>
+<p>Install nodejs, the ratings app and start it, test it.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo apt-get install nodejs npm
+</code></pre></div>
+</li>
+<li>
+<p>Install dependencies</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span> ratings/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>npm install
+</code></pre></div>
+</li>
+<li>
+<p>Run the app:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>node ratins.js <span class="m">9080</span> <span class="p">&amp;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Test the app.</p>
+<p>Retrieve a rating.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl http://localhost:9080/ratings/123
+</code></pre></div>
+</li>
+</ol>
+<h3 id="allow-pod-to-vm-traffic-on-port-9080">Allow POD-to-VM traffic on port 9080<a class="headerlink" href="#allow-pod-to-vm-traffic-on-port-9080" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">CLUSTER_POD_CIDR</span><span class="o">=</span><span class="k">$(</span>gcloud container clusters describe my-istio-cluster --format<span class="o">=</span>json <span class="p">|</span> jq -r <span class="s1">&#39;.clusterIpv4Cidr&#39;</span><span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>gcloud compute firewall-rules create <span class="s2">&quot;cluster-pods-to-vm&quot;</span> <span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  --source-ranges<span class="o">=</span><span class="nv">$CLUSTER_POD_CIDR</span> <span class="se">\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  --target-tags<span class="o">=</span>mesh-vm <span class="se">\</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  --action<span class="o">=</span>allow <span class="se">\</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  --rules<span class="o">=</span>tcp:9080
+</code></pre></div>
+<h2 id="install-istio">Install Istio<a class="headerlink" href="#install-istio" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>istioctl install <span class="se">\</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  --set values.pilot.env.PILOT_ENABLE_WORKLOAD_ENTRY_AUTOREGISTRATION<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  --set values.pilot.env.PILOT_ENABLE_WORKLOAD_ENTRY_HEALTHCHECKS<span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<h2 id="deploy-bookinfo-sans-ratings">Deploy BookInfo (sans ratings)<a class="headerlink" href="#deploy-bookinfo-sans-ratings" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Turn on sidecar-injection.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>k label ns default istio-injection<span class="o">=</span>enabled
+</code></pre></div>
+</li>
+<li>
+<p>Deploy the reviews service.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>k apply -f bookinfo/bookinfo-reviews.yaml
+</code></pre></div>
+<p>Important: the reviews service uses an environment variable named <code>SERVICES_DOMAIN</code> that we use to adjust the ratings app target url to reflect the fact that it resides in a different namespace.</p>
+</li>
+<li>
+<p>Deploy the remaining services.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>k apply -f bookinfo/bookinfo-rest.yaml
+</code></pre></div>
+</li>
+</ol>
+<h2 id="install-east-west-gateway-and-expose-istiod">Install east-west gateway and expose Istiod<a class="headerlink" href="#install-east-west-gateway-and-expose-istiod" title="Permanent link">&para;</a></h2>
+<p>Control plane traffic between the VM and istiod goes through this gateway (see <a href="https://istio.io/latest/docs/ops/deployment/vm-architecture/">the Istio documentation</a>).</p>
+<ol>
+<li>
+<p>Install the gateway</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./scripts/gen-eastwest-gateway.sh --single-cluster <span class="p">|</span> istioctl install -y -f -
+</code></pre></div>
+</li>
+<li>
+<p>Expose istiod</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>k apply -n istio-system -f ./artifacts/expose-istiod.yaml
+</code></pre></div>
+</li>
+</ol>
+<h2 id="create-the-ratings-namespace-and-service-account">Create the ratings namespace and service account<a class="headerlink" href="#create-the-ratings-namespace-and-service-account" title="Permanent link">&para;</a></h2>
+<p>The ratings service running on the VM will map to the ratings namespace in kubernetes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>k create namespace ratings
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>k create serviceaccount bookinfo-ratings -n ratings
+</code></pre></div>
+<h2 id="create-the-workloadgroup">Create the WorkloadGroup<a class="headerlink" href="#create-the-workloadgroup" title="Permanent link">&para;</a></h2>
+<p>A WorkloadGroup is a template for WorkloadEntity objects, see the <a href="https://istio.io/latest/docs/reference/config/networking/workload-group/">Istio reference</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>istioctl x workload group create <span class="se">\</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  --name <span class="s2">&quot;ratings&quot;</span> <span class="se">\</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  --namespace <span class="s2">&quot;ratings&quot;</span> <span class="se">\</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  --labels <span class="nv">app</span><span class="o">=</span><span class="s2">&quot;ratings&quot;</span> <span class="se">\</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  --serviceAccount <span class="s2">&quot;bookinfo-ratings&quot;</span> &gt; workloadgroup.yaml
+</code></pre></div>
+<p>Apply the workloadgroup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>k apply -f workloadgroup.yaml -n ratings
+</code></pre></div>
+<h2 id="generate-vm-artifacts">Generate VM artifacts<a class="headerlink" href="#generate-vm-artifacts" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>istioctl x workload entry configure -f workloadgroup.yaml -o vm_files --autoregister
+</code></pre></div>
+<p>Note: check that <code>vm_files/hosts</code> is not blank. If it is, it means you ran the command too soon.  Re-run it.</p>
+<h2 id="vm-configuration-recipe">VM configuration recipe<a class="headerlink" href="#vm-configuration-recipe" title="Permanent link">&para;</a></h2>
+<p>Copy the generated artifacts to the VM.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>gcloud compute scp vm_files/* ubuntu@my-mesh-vm:
+</code></pre></div>
+<p>Ssh onto the VM</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>gcloud compute ssh ubuntu@my-mesh-vm
+</code></pre></div>
+<p>And, on the VM, run the following commands (taken from <a href="https://istio.io/latest/docs/setup/install/virtual-machine/#configure-the-virtual-machine">here</a>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo mkdir -p /etc/certs
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>sudo cp ~/root-cert.pem /etc/certs/root-cert.pem
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>sudo  mkdir -p /var/run/secrets/tokens
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>sudo cp ~/istio-token /var/run/secrets/tokens/istio-token
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>curl -LO https://storage.googleapis.com/istio-release/releases/1.13.2/deb/istio-sidecar.deb
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>sudo dpkg -i istio-sidecar.deb
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>sudo cp ~/cluster.env /var/lib/istio/envoy/cluster.env
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>sudo cp ~/mesh.yaml /etc/istio/config/mesh
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>sudo sh -c &#39;cat $(eval echo ~$SUDO_USER)/hosts &gt;&gt; /etc/hosts&#39;
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>sudo mkdir -p /etc/istio/proxy
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>sudo chown -R istio-proxy /etc/certs /var/run/secrets /var/lib/istio /etc/istio/config /etc/istio/proxy
+</code></pre></div>
+<h2 id="exercise-1">Exercise 1<a class="headerlink" href="#exercise-1" title="Permanent link">&para;</a></h2>
+<p>Watch the WorkloadEntry get created as a consequence of the VM registering with the mesh.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>k get workloadentry -n ratings -w
+</code></pre></div>
+<p>On the VM:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo systemctl start istio
+</code></pre></div>
+<p>Notice the workload entry show up in the listing.  This can take up to a minute.</p>
+<h2 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h2>
+<p>Although the ratings services does not need to call back into the mesh, we can manually test communication from the VM into the mesh.</p>
+<p>From the VM, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>curl details.default.svc:9080/details/123
+</code></pre></div>
+<h2 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h2>
+<p>Test communication from a pod to the ratings service running on the VM.</p>
+<p>Create a ClusterIP service to front the application:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>k apply -n ratings -f bookinfo/bookinfo-ratings.yaml
+</code></pre></div>
+<p>Create a temporary client pod in the default namespace</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>k run curlpod --image<span class="o">=</span>radial/busyboxplus:curl -it --rm
+</code></pre></div>
+<p>From within the container, run the curl command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>curl ratings.ratings:9080/ratings/123
+</code></pre></div>
+<p>Finally, <code>exit</code> the container.</p>
+<h2 id="put-it-all-together">Put it all together<a class="headerlink" href="#put-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Expose BookInfo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>k apply -f bookinfo/bookinfo-gateway.yaml
+</code></pre></div>
+<p>Grab your load balancer public IP address:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">GATEWAY_IP</span><span class="o">=</span><span class="k">$(</span>kubectl get svc -n istio-system istio-ingressgateway -ojsonpath<span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
+</code></pre></div>
+<p>Open a browser and visit the BookInfo product page (at /productpage).  Verify that you can see ratings on the page.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>curl <span class="nv">$GATEWAY_IP</span>/productpage
+</code></pre></div>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://istio.io/latest/docs/ops/deployment/vm-architecture/">Istio VM Architecture</a></li>
+<li><a href="https://istio.io/latest/docs/setup/install/virtual-machine/">Basic recipe from the Istio docs</a></li>
+<li><a href="https://github.com/GoogleCloudPlatform/istio-samples/tree/master/mesh-expansion-gce">GCP-specific information on mesh expansion</a> (dated)</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Description" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Description
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+    
+  </body>
+</html>
