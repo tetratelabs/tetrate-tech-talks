@@ -39,7 +39,7 @@ You'll have plenty of opportunity to get to know me in this and upcoming episode
 ---
 # Tetrate Tech Talks [web page](https://tetratelabs.github.io/tetrate-tech-talks/)
 
-https://tetratelabs.github.io/tetrate-tech-talks/
+##https://tetratelabs.github.io/tetrate-tech-talks/
 
 ---
 # Next week's Episode
@@ -55,15 +55,15 @@ https://tetratelabs.github.io/tetrate-tech-talks/
 ---
 # Free Workshops!
 
-- Istio 0 to 60
-- WASM
+- [Istio 0 to 60](https://tetratelabs.github.io/istio-0to60/)
+- [WASM](https://tetratelabs.github.io/wasm-workshop/)
 
 We run these workshops periodically.  But the lab materials are free and available for you to work through (and contribute to) at any time.
 
 ---
 # Upcoming Industry Events
 
-- [IstioCon 2022](https://events.istio.io/istiocon-2022/)
+- [IstioCon 2022](https://events.istio.io/istiocon-2022/), April 25-29
 
     - I will be doing a workshop.. Istio 0 to 60. Join me!
 
@@ -81,7 +81,9 @@ We run these workshops periodically.  But the lab materials are free and availab
 ---
 # Join the conversation..
 
-..on our [slack channel](https://tetrate-community.slack.com/): https://tetrate-community.slack.com/
+..on our [Slack channel](https://tetrate-community.slack.com/):
+
+##https://tetrate-community.slack.com/
 
 ---
 # Finally.. the episode
