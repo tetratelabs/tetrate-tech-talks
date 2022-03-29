@@ -46,8 +46,8 @@ https://tetratelabs.github.io/tetrate-tech-talks/
 
   - Date: Friday April 8
   - Topic: DevSecOps and NIST-800-204-C
-  - Host: Zack Butcher
-  - Guests: Nicolas ?, Mouli ?
+  - Host: Zack Butcher, head of product at Tetrate
+  - Guests: Nicolas Chaillan, and Ramaswamy Chandramouli (aka Mouli)
   - Demo: NIST controls in TSB
 
   https://tetratelabs.github.io/tetrate-tech-talks/episode2/
