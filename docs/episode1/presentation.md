@@ -17,7 +17,13 @@ Episode:
 - Will present a technical topic
 
 ---
-# I'm your host, Eitan Suez.
+# Meet our CEO, Varun Talwar
+
+- Varun, meet the Service Mesh community!
+- q: In your own words.. what this new broadcast series is all about?
+
+---
+# I'm your host, Eitan Suez
 
 I work at Tetrate, and I like to talk tech.
 
