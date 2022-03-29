@@ -37,7 +37,7 @@ Did a lot of Java and Javascript, startups in the late 90's and early 2000's, us
 You'll have plenty of opportunity to get to know me in this and upcoming episodes!
 
 ---
-# Tetrate Tech Talks web page
+# Tetrate Tech Talks [web page](https://tetratelabs.github.io/tetrate-tech-talks/)
 
 https://tetratelabs.github.io/tetrate-tech-talks/
 
