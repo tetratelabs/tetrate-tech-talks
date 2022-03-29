@@ -49,6 +49,10 @@ Wait for the machine to be ready.
 1. Install nodejs, the ratings app and start it, test it.
 
     ```shell
+    sudo apt-get update
+    ```
+
+    ```shell
     sudo apt-get install nodejs npm
     ```
 
@@ -62,7 +66,7 @@ Wait for the machine to be ready.
 1. Run the app:
 
     ```shell
-    node ratins.js 9080 &
+    node ratings.js 9080 &
     ```
 
 1. Test the app.
