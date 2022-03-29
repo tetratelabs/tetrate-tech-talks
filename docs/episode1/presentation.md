@@ -27,8 +27,7 @@ I've spent a lot of time in the last few years doing a lot of technical explaini
 
 My background has a long tail so to speak, I started out as an electrical engineer turned systems analyst.
 An abbreviated history.. was gung ho about the web in the years when netscape announced its browser.
-Did a lot of Java, startups in the late 90's and early 2000's, user group community stuff, conference speaking, Groovy, Spring, consulting,
-to education.  Moved from dev to ops with cloud foundry and bosh, then to kubernetes and now to all things service mesh.
+Did a lot of Java and Javascript, startups in the late 90's and early 2000's, user group community stuff, conference speaking, Groovy, Spring, consulting, to education.  Moved from dev to ops with cloud foundry and bosh, then to kubernetes and now to all things service mesh.
 You'll have plenty of opportunity to get to know me in this and upcoming episodes!
 
 ---
@@ -46,6 +45,14 @@ https://tetratelabs.github.io/tetrate-tech-talks/
   - Demo: NIST controls in TSB
 
   https://tetratelabs.github.io/tetrate-tech-talks/episode2/
+
+---
+# Free Workshops!
+
+- Istio 0 to 60
+- WASM
+
+We run these workshops periodically.  But the lab materials are free and available for you to work through (and contribute to) at any time.
 
 ---
 # Upcoming Industry Events
