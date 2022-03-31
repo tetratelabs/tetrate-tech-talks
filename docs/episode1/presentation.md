@@ -11,10 +11,7 @@ Objectives:
 - getting to know the diverse members of the service mesh community
 - have fun!
 
-Episode:
-
-- Feature a guest
-- Will present a technical topic
+Episodes present a technical topic and feature a guest.
 
 ---
 # Meet our CEO, Varun Talwar
@@ -31,9 +28,12 @@ A little bit about myself and my background..
 I've spent a lot of time in the last few years doing a lot of technical explaining:
   technical education, training, in-person, online, conference training, and more.
 
-My background has a long tail so to speak, I started out as an electrical engineer turned systems analyst.
+My background has a long tail so to speak, I started out as an electrical engineer turned software engineer.
 An abbreviated history.. was gung ho about the web in the years when netscape announced its browser.
-Did a lot of Java and Javascript, startups in the late 90's and early 2000's, user group community stuff, conference speaking, Groovy, Spring, consulting, to education.  Moved from dev to ops with cloud foundry and bosh, then to kubernetes and now to all things service mesh.
+Did a lot of Java and Javascript, startups in the late 90's and early 2000's, user group community stuff, conference speaking, Groovy, Spring, consulting, to education.
+
+Moved from dev to ops with cloud foundry and bosh, then to Kubernetes and now to all things service mesh.
+
 You'll have plenty of opportunity to get to know me in this and upcoming episodes!
 
 ---
@@ -42,21 +42,10 @@ You'll have plenty of opportunity to get to know me in this and upcoming episode
 ##https://tetratelabs.github.io/tetrate-tech-talks/
 
 ---
-# Next week's Episode
-
-  - Date: Friday April 8
-  - Topic: DevSecOps and NIST-800-204-C
-  - Host: Zack Butcher, head of product at Tetrate
-  - Guests: Nicolas Chaillan, and Ramaswamy Chandramouli (aka Mouli)
-  - Demo: NIST controls in TSB
-
-  https://tetratelabs.github.io/tetrate-tech-talks/episode2/
-
----
 # Free Workshops!
 
-- [Istio 0 to 60](https://tetratelabs.github.io/istio-0to60/)
-- [WASM](https://tetratelabs.github.io/wasm-workshop/)
+- [Istio 0 to 60](https://tetratelabs.github.io/istio-0to60/) (May 4)
+- [WASM](https://tetratelabs.github.io/wasm-workshop/) (April 20)
 
 We run these workshops periodically.  But the lab materials are free and available for you to work through (and contribute to) at any time.
 
@@ -65,7 +54,7 @@ We run these workshops periodically.  But the lab materials are free and availab
 
 - [IstioCon 2022](https://events.istio.io/istiocon-2022/), April 25-29
 
-    - I will be doing a workshop.. Istio 0 to 60. Join me!
+    - I hope to be conducting a workshop.. Istio 0 to 60. Join me!
 
 - [ServiceMeshCon](https://events.linuxfoundation.org/servicemeshcon-europe/) & [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/), May 16 + 17-20
 
@@ -94,7 +83,7 @@ We run these workshops periodically.  But the lab materials are free and availab
 
 - Our Guest: Bart Van Bos
 
-Let's get started..
+Let's [get started](../demo)..
 
 
 ---
