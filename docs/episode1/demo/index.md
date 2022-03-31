@@ -239,7 +239,7 @@ Test communication from a pod to the ratings service running on the VM.
 Create a ClusterIP service to front the application:
 
 ```shell
-k apply -n ratings -f bookinfo/bookinfo-ratings.yaml
+k apply -n ratings -f bookinfo/bookinfo-ratings-service.yaml
 ```
 
 Create a temporary client pod in the default namespace
