@@ -13,6 +13,8 @@ Here is the [link](https://www.youtube.com/playlist?list=PLm51GPKRAmTlOkjWDJBQYt
 
 # Upcoming Episodes
 
+- Episode 2 - Friday April 8 2022, 9:00 Pacific time (1 hr). **Topic to be announced**
+
 Stay tuned as we line up guests and topics in the coming weeks!
 
 # Past Episodes:
