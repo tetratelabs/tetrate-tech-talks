@@ -1,5 +1,7 @@
 # Episode 1
 
+[Recorded episode](https://youtu.be/mHR7rR83KjM)
+
 ## Your Host: [Eitan Suez](https://www.linkedin.com/in/eitan-suez-2336b26/)
 
 Eitan will be hosting this episode from Austin, Texas.
