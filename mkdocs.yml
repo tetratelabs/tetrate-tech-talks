@@ -27,6 +27,10 @@ nav:
     - Description: episode1/index.md
     - Presentation: episode1/presentation.md
     - Demo: episode1/demo/index.md
+  - Episode 2:
+    - Description: episode2/index.md
+    - Presentation: episode2/presentation.md
+    - Demo: episode2/demo/index.md
   - Episode 4:
     - Description: episode4/index.md
   - Episode 6:

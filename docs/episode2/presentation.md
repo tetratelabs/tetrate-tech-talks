@@ -1,0 +1,70 @@
+
+---
+# About Tetrate Tech Talks
+
+A new series of broadcasts that runs every Friday at 9:00 AM Pacific
+  streamed to YouTube and to LinkedIn Live.
+
+##https://tetratelabs.github.io/tetrate-tech-talks/
+
+Objectives:
+
+- learning and sharing knowledge
+- getting to know the diverse members of the service mesh community
+- have fun!
+
+Episodes present a technical topic and feature a guest.
+
+---
+# I'm your host, Eitan Suez
+
+I work at Tetrate, and I like to talk tech.
+
+---
+# Previously on Tetrate Tech Talks..
+
+In the last episode we discussed onboarding VMs to a mesh.
+
+My colleague Peter Jausovec, tuned me onto a blog entry titled [an easier way to add virtual machines to Istio services mesh](https://istio.io/latest/blog/2021/simple-vms/), which I recommend you check out, to get deeper into that topic.
+
+---
+# Free Workshops!
+
+- [WASM](https://tetratelabs.github.io/wasm-workshop/) (April 20)
+- [Istio 0 to 60](https://tetratelabs.github.io/istio-0to60/) (May 4)
+
+We run these workshops periodically.  But the lab materials are free and available for you to work through (and contribute to) at any time.
+
+---
+# Upcoming Industry Events
+
+- [IstioCon 2022](https://events.istio.io/istiocon-2022/), April 25-29
+
+    - I **will** be conducting a workshop.. Istio 0 to 60. Join me!
+
+- [ServiceMeshCon](https://events.linuxfoundation.org/servicemeshcon-europe/) & [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/), May 16 + 17-20
+
+    - Tetrate will be running its own [one-day event](https://www.tetrate.io/event/tetrate-envoy-and-service-mesh-immersion-day/) with keynotes, talks, and announcements.
+
+    Come join us in Valencia, Spain!
+
+- [Austin Roadshow](https://www.eventbrite.com/e/tetrates-austin-roadshow-tickets-313862710817) - April 21
+
+---
+# Join the conversation..
+
+..on our [Slack channel](https://tetrate-community.slack.com/):
+
+##https://tetrate-community.slack.com/
+
+---
+# Finally.. the episode
+
+- What are we going to learn?
+
+    ##Upgrading Istio
+
+Let's [get started](../demo)..
+
+
+---
