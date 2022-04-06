@@ -24,4 +24,4 @@ Stay tuned as we line up additional guests and topics!
 
 # Past Episodes:
 
-- [Episode 1](episode1/) - Friday April 1 2022
+- [Episode 1](episode1/) - April 1 2022: **Onboarding VMs**, Guest: Bart van Bos

@@ -16,7 +16,7 @@ We begin the episode with a demonstration of how to add a VM to your Istio mesh,
 
 Eitan will be running the demonstration.  If you'd like to follow along, the instructions are [here](demo/index.md).
 
-## Guest: [Bart Van Bos](https://www.linkedin.com/in/bartvanbos/)
+## Guest: [Bart van Bos](https://www.linkedin.com/in/bartvanbos/)
 
 Bart is a Tetrand living and working in Belgium.  Bart has experience working with customers and integrating service meshes in the enterprise.
 

@@ -81,7 +81,7 @@ We run these workshops periodically.  But the lab materials are free and availab
 
     How to connect VM workloads to Istio Mesh
 
-- Our Guest: Bart Van Bos
+- Our Guest: Bart van Bos
 
 Let's [get started](../demo)..
 
