@@ -2,7 +2,7 @@
 
 This document demonstrates upgrading Istio in a way that allows operators to be in control of the transition of workloads from one version to the next.
 
-This document is an adaptation of the document entitled [Canary Upgrades](https://istio.io/latest/docs/setup/upgrade/canary/Istio) from the official Istio documentation.
+This document is an adaptation of the document entitled [Canary Upgrades](https://istio.io/latest/docs/setup/upgrade/canary/) from the official Istio documentation.
 
 The [BookInfo](https://istio.io/latest/docs/examples/bookinfo/) sample application will serve as the workload under test.
 
