@@ -33,8 +33,8 @@ nav:
     - Demo: episode2/demo/index.md
   - Episode 4:
     - Description: episode4/index.md
-  - Episode 6:
-    - Description: episode6/index.md
+  - Episode 5:
+    - Description: episode5/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details
