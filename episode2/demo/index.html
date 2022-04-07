@@ -856,109 +856,111 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-12-5
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>k get pods -n istio-system -l <span class="nv">app</span><span class="o">=</span>istiod
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>k get svc -n istio-system -l <span class="nv">app</span><span class="o">=</span>istiod
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>k get mutatingwebhookconfigurations
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>k get pods -n istio-system
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>k get svc -n istio-system
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>k get mutatingwebhookconfigurations
 </code></pre></div>
 <p>Check the ingressgateway Istio version:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>istioctl proxy-status
 </code></pre></div>
 <h2 id="label-the-default-namespace">Label the default namespace<a class="headerlink" href="#label-the-default-namespace" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>k label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-12-5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>k label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-12-5
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>k get ns -Listio.io/rev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>k get ns -Listio.io/rev
 </code></pre></div>
 <h2 id="deploy-bookinfo">Deploy BookInfo<a class="headerlink" href="#deploy-bookinfo" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>kubectl <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>kubectl <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
 </code></pre></div>
 <p>Configure ingress:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">GATEWAY_IP</span><span class="o">=</span><span class="k">$(</span>kubectl get svc -n istio-system istio-ingressgateway -ojsonpath<span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">GATEWAY_IP</span><span class="o">=</span><span class="k">$(</span>kubectl get svc -n istio-system istio-ingressgateway -ojsonpath<span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
 </code></pre></div>
 <p>Open a browser and visit the BookInfo product page (at <code>/productpage</code>).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>curl <span class="nv">$GATEWAY_IP</span>/productpage
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>curl <span class="nv">$GATEWAY_IP</span>/productpage
 </code></pre></div>
 <h2 id="verifying-that-workloads-use-version-1125">Verifying that workloads use version 1.12.5<a class="headerlink" href="#verifying-that-workloads-use-version-1125" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>With <code>istioctl proxy-status</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>istioctl proxy-status
 </code></pre></div>
 </li>
 <li>
 <p>Checking the server_info endpoint of a sidecar:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>istioctl dashboard envoy deployment/details-v1.default
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>istioctl dashboard envoy deployment/details-v1.default
 </code></pre></div>
 <p>And check that the ANNOTATIONS revision is 1-12-5</p>
 </li>
 <li>
 <p>Describe the pod</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>k describe pod details-v1-&lt;tab&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>k describe pod details-v1-&lt;tab&gt;
 </code></pre></div>
 </li>
 </ol>
 <h2 id="switch-directories">Switch directories<a class="headerlink" href="#switch-directories" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">cd</span> ../istio-1.13.2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">cd</span> ../istio-1.13.2
 </code></pre></div>
 <p>Make sure your PATH now points to version 1.13.2 of the <code>istioctl</code> CLI:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>istioctl version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl version
 </code></pre></div>
 <h2 id="install-istio-version-1132">Install Istio version 1.13.2<a class="headerlink" href="#install-istio-version-1132" title="Permanent link">&para;</a></h2>
 <p>Pre-check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>istioctl x precheck
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>istioctl x precheck
+</code></pre></div>
+<p>Install:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-13-2
 </code></pre></div>
 <p><a href="https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/">Analyze</a>?:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl analyze
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>istioctl analyze
 </code></pre></div>
 <p>Also, see the <code>istioctl analyze</code> <a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-analyze">command reference</a>, and
 <a href="https://istio.io/latest/docs/reference/config/analysis/">configuration analysis messsages</a>.  Possible <a href="https://github.com/istio/istio/issues/22698">false positive</a> and <a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway">Gateway resource</a>.</p>
-<p>Install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-13-2
-</code></pre></div>
 <ul>
 <li>Both 1-13-2 and 1-12-5 istiod's are installed</li>
 <li>ingressgateway has been upgraded to 1.13.2</li>
 <li>Pods still use 1-12-5</li>
 </ul>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>k get pods -n istio-system -l <span class="nv">app</span><span class="o">=</span>istiod
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>k get pods -n istio-system
 </code></pre></div>
 <p>And:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>istioctl proxy-status
 </code></pre></div>
 <h2 id="update-namespace-label">Update namespace label<a class="headerlink" href="#update-namespace-label" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>kubectl label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-13-2 --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-13-2 --overwrite
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>k get ns -Listio.io/rev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>k get ns -Listio.io/rev
 </code></pre></div>
 <h2 id="restart-the-deployments-in-the-default-namespace">Restart the deployments in the default namespace<a class="headerlink" href="#restart-the-deployments-in-the-default-namespace" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl rollout restart deployment -n default
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>kubectl rollout restart deployment -n default
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>istioctl proxy-status
 </code></pre></div>
 <h2 id="teardown-the-old-version">Teardown the old version<a class="headerlink" href="#teardown-the-old-version" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>istioctl x uninstall --revision <span class="m">1</span>-12-5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>istioctl x uninstall --revision <span class="m">1</span>-12-5
 </code></pre></div>
 <p>Verify that the bookinfo application is still alive and well.</p>
 <h2 id="using-revision-tags">Using Revision Tags<a class="headerlink" href="#using-revision-tags" title="Permanent link">&para;</a></h2>
 <p>Instead of specifying the actual revision we want, we use a semantic name, like <code>prod</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>k label ns default istio.io/rev<span class="o">=</span>prod --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>k label ns default istio.io/rev<span class="o">=</span>prod --overwrite
 </code></pre></div>
 <p>And then associate prod to a revision:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-13-2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-13-2
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>istioctl tag list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>istioctl tag list
 </code></pre></div>
 <p>To change what prod means, we associate a different revision to it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-12-5 --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-12-5 --overwrite
 </code></pre></div>
 <h2 id="what-about-the-gateways">What about the Gateways?<a class="headerlink" href="#what-about-the-gateways" title="Permanent link">&para;</a></h2>
 <p>Gateways can be canary-ugraded instead of using in-place upgrades.</p>
@@ -971,7 +973,7 @@
 </ol>
 <h2 id="closing-thoughts">Closing thoughts<a class="headerlink" href="#closing-thoughts" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Operators can make available a new version of Istio and notify developers to update their workloads on their own time</li>
+<li>Operators can make available a new version of Istio and notify developers to update their workloads on their own time.</li>
 <li>Develop a process, and automation for implementing Istio ugprades, and rollbacks.
   Start by listening to Pratima Nambiar from Salesforce in her <a href="https://youtu.be/j273hsoqza0?t=1308">Istio Community Talk</a>.</li>
 </ul>
