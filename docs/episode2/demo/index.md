@@ -273,6 +273,17 @@ To change what prod means, we associate a different revision to it:
 istioctl tag set prod --revision 1-12-5 --overwrite
 ```
 
+## What about the Gateways?
+
+Gateways can be canary-ugraded instead of using in-place upgrades.
+
+Here's an outline of the recipe:
+
+1. Install istiod by itself (no gateway) by using the [minimal profile](https://istio.io/latest/docs/setup/additional-setup/config-profiles/).
+2. Install the gateway separately by using the empty profile.
+3. Can canary-deploy the gateway by creating a second deployment, and labeling the deployment with `istio.io/rev` to control which sidecar version is bundled into the pod.
+4. This is explained in more detail [here](https://istio.io/latest/docs/setup/additional-setup/gateway/).
+
 ## Closing thoughts
 
 - Operators can make available a new version of Istio and notify developers to update their workloads on their own time
