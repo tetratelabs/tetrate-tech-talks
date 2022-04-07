@@ -74,7 +74,7 @@ Likewise, the same file in the `istio-1.13.2` directory allows me to quickly swi
 
 ## Install Istio
 
-Pre-check:
+[Pre-check](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-experimental-precheck):
 
 ```shell
 istioctl x precheck
@@ -185,6 +185,16 @@ Pre-check:
 istioctl x precheck
 ```
 
+[Analyze](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/)?:
+
+```shell
+istioctl analyze
+```
+
+Also, see the `istioctl analyze` [command reference](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-analyze), and
+[configuration analysis messsages](https://istio.io/latest/docs/reference/config/analysis/).  Possible [false positive](https://github.com/istio/istio/issues/22698) and [Gateway resource](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway).
+
+
 Install:
 
 ```shell
@@ -263,8 +273,13 @@ To change what prod means, we associate a different revision to it:
 istioctl tag set prod --revision 1-12-5 --overwrite
 ```
 
+## Closing thoughts
+
+- Operators can make available a new version of Istio and notify developers to update their workloads on their own time
+
 ## References
 
 - [Canary upgrades](https://istio.io/latest/docs/setup/upgrade/canary/)
 - [Revision tags](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-tag)
-- [Blog entry](https://istio.io/latest/blog/2021/revision-tags/)
+- [Blog entry on revision tags](https://istio.io/latest/blog/2021/revision-tags/)
+- [Istio Community Talk by Pratima Nambiar (SalesForce)](https://youtu.be/j273hsoqza0?t=1308)

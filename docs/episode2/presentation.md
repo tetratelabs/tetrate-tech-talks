@@ -16,6 +16,12 @@ Objectives:
 Episodes present a technical topic and feature a guest.
 
 ---
+# Upcoming Episodes
+
+- Kiali
+- Web Assembly
+
+---
 # I'm your host, Eitan Suez
 
 I work at Tetrate, and I like to talk tech.
@@ -49,6 +55,10 @@ We run these workshops periodically.  But the lab materials are free and availab
     Come join us in Valencia, Spain!
 
 - [Austin Roadshow](https://www.eventbrite.com/e/tetrates-austin-roadshow-tickets-313862710817) - April 21
+
+- [April Eastern Canadian CNCF Meetup: K8s Local dev productivity tools & Setting up Istio Gateways](https://community.cncf.io/events/details/cncf-cloud-native-canada-presents-april-eastern-canadian-cncf-meetup-k8s-local-dev-productivity-tools-setting-up-istio-gateways/) - Cloud Native Canada
+
+    Tue, Apr 12, 12:00 PM (EDT)
 
 ---
 # Join the conversation..
