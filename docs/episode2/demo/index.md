@@ -276,10 +276,11 @@ istioctl tag set prod --revision 1-12-5 --overwrite
 ## Closing thoughts
 
 - Operators can make available a new version of Istio and notify developers to update their workloads on their own time
+- Develop a process, and automation for implementing Istio ugprades, and rollbacks.
+  Start by listening to Pratima Nambiar from Salesforce in her [Istio Community Talk](https://youtu.be/j273hsoqza0?t=1308).
 
 ## References
 
 - [Canary upgrades](https://istio.io/latest/docs/setup/upgrade/canary/)
 - [Revision tags](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-tag)
 - [Blog entry on revision tags](https://istio.io/latest/blog/2021/revision-tags/)
-- [Istio Community Talk by Pratima Nambiar (SalesForce)](https://youtu.be/j273hsoqza0?t=1308)
