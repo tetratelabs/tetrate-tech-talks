@@ -260,7 +260,7 @@ istioctl tag list
 To change what prod means, we associate a different revision to it:
 
 ```shell
-istioctl tag set prod --revision 1-12-3 --overwrite
+istioctl tag set prod --revision 1-12-5 --overwrite
 ```
 
 ## References
