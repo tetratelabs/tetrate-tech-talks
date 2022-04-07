@@ -506,6 +506,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#closing-thoughts" class="md-nav__link">
+    Closing thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -747,6 +754,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#closing-thoughts" class="md-nav__link">
+    Closing thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -821,7 +835,7 @@
 <p>I can run <code>direnv allow</code>, and note that running <code>istioctl version</code> from that directory returns <code>1.12.5</code>.</p>
 <p>Likewise, the same file in the <code>istio-1.13.2</code> directory allows me to quickly switch to that version.</p>
 <h2 id="install-istio">Install Istio<a class="headerlink" href="#install-istio" title="Permanent link">&para;</a></h2>
-<p>Pre-check:</p>
+<p><a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-experimental-precheck">Pre-check</a>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>istioctl x precheck
 </code></pre></div>
 <p>Install:</p>
@@ -885,8 +899,13 @@
 <p>Pre-check:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>istioctl x precheck
 </code></pre></div>
+<p><a href="https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/">Analyze</a>?:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl analyze
+</code></pre></div>
+<p>Also, see the <code>istioctl analyze</code> <a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-analyze">command reference</a>, and
+<a href="https://istio.io/latest/docs/reference/config/analysis/">configuration analysis messsages</a>.  Possible <a href="https://github.com/istio/istio/issues/22698">false positive</a> and <a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway">Gateway resource</a>.</p>
 <p>Install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-13-2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-13-2
 </code></pre></div>
 <ul>
 <li>Both 1-13-2 and 1-12-5 istiod's are installed</li>
@@ -894,44 +913,49 @@
 <li>Pods still use 1-12-5</li>
 </ul>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>k get pods -n istio-system -l <span class="nv">app</span><span class="o">=</span>istiod
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>k get pods -n istio-system -l <span class="nv">app</span><span class="o">=</span>istiod
 </code></pre></div>
 <p>And:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>istioctl proxy-status
 </code></pre></div>
 <h2 id="update-namespace-label">Update namespace label<a class="headerlink" href="#update-namespace-label" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>kubectl label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-13-2 --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>kubectl label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-13-2 --overwrite
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>k get ns -Listio.io/rev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>k get ns -Listio.io/rev
 </code></pre></div>
 <h2 id="restart-the-deployments-in-the-default-namespace">Restart the deployments in the default namespace<a class="headerlink" href="#restart-the-deployments-in-the-default-namespace" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>kubectl rollout restart deployment -n default
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl rollout restart deployment -n default
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>istioctl proxy-status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>istioctl proxy-status
 </code></pre></div>
 <h2 id="teardown-the-old-version">Teardown the old version<a class="headerlink" href="#teardown-the-old-version" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>istioctl x uninstall --revision <span class="m">1</span>-12-5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>istioctl x uninstall --revision <span class="m">1</span>-12-5
 </code></pre></div>
 <p>Verify that the bookinfo application is still alive and well.</p>
 <h2 id="using-revision-tags">Using Revision Tags<a class="headerlink" href="#using-revision-tags" title="Permanent link">&para;</a></h2>
 <p>Instead of specifying the actual revision we want, we use a semantic name, like <code>prod</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>k label ns default istio.io/rev<span class="o">=</span>prod --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>k label ns default istio.io/rev<span class="o">=</span>prod --overwrite
 </code></pre></div>
 <p>And then associate prod to a revision:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-13-2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-13-2
 </code></pre></div>
 <p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>istioctl tag list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>istioctl tag list
 </code></pre></div>
 <p>To change what prod means, we associate a different revision to it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-12-5 --overwrite
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-12-5 --overwrite
 </code></pre></div>
+<h2 id="closing-thoughts">Closing thoughts<a class="headerlink" href="#closing-thoughts" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Operators can make available a new version of Istio and notify developers to update their workloads on their own time</li>
+</ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://istio.io/latest/docs/setup/upgrade/canary/">Canary upgrades</a></li>
 <li><a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-tag">Revision tags</a></li>
-<li><a href="https://istio.io/latest/blog/2021/revision-tags/">Blog entry</a></li>
+<li><a href="https://istio.io/latest/blog/2021/revision-tags/">Blog entry on revision tags</a></li>
+<li><a href="https://youtu.be/j273hsoqza0?t=1308">Istio Community Talk by Pratima Nambiar (SalesForce)</a></li>
 </ul>
 
               
