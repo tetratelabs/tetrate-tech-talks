@@ -42,6 +42,16 @@ My colleague Peter Jausovec, tuned me onto a blog entry titled [an easier way to
 We run these workshops periodically.  But the lab materials are free and available for you to work through (and contribute to) at any time.
 
 ---
+# Istio Certification
+
+- On the [Tetrate Academy](https://academy.tetrate.io/courses/certified-istio-administrator)
+
+    If you already obtained your Kubernetes certifications, the next logical step is Istio certification.
+    When you're ready, we have the certification exam available for you to take.
+
+- Stay tuned for a future episode with Peter Jausovec about the certification exam, where we will ask him for his advice on how to prepare, what to study, and perhaps even his personal take on the value of getting Istio-certified.
+
+---
 # Upcoming Industry Events
 
 - [IstioCon 2022](https://events.istio.io/istiocon-2022/), April 25-29
