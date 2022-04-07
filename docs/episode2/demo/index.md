@@ -89,8 +89,14 @@ istioctl install --set revision=1-12-5
 Check:
 
 ```shell
-k get pods -n istio-system -l app=istiod
-k get svc -n istio-system -l app=istiod
+k get pods -n istio-system
+```
+
+```shell
+k get svc -n istio-system
+```
+
+```shell
 k get mutatingwebhookconfigurations
 ```
 
@@ -185,6 +191,12 @@ Pre-check:
 istioctl x precheck
 ```
 
+Install:
+
+```shell
+istioctl install --set revision=1-13-2
+```
+
 [Analyze](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/)?:
 
 ```shell
@@ -195,12 +207,6 @@ Also, see the `istioctl analyze` [command reference](https://istio.io/latest/doc
 [configuration analysis messsages](https://istio.io/latest/docs/reference/config/analysis/).  Possible [false positive](https://github.com/istio/istio/issues/22698) and [Gateway resource](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway).
 
 
-Install:
-
-```shell
-istioctl install --set revision=1-13-2
-```
-
 - Both 1-13-2 and 1-12-5 istiod's are installed
 - ingressgateway has been upgraded to 1.13.2
 - Pods still use 1-12-5
@@ -208,7 +214,7 @@ istioctl install --set revision=1-13-2
 Check:
 
 ```shell
-k get pods -n istio-system -l app=istiod
+k get pods -n istio-system
 ```
 
 And:
@@ -286,7 +292,7 @@ Here's an outline of the recipe:
 
 ## Closing thoughts
 
-- Operators can make available a new version of Istio and notify developers to update their workloads on their own time
+- Operators can make available a new version of Istio and notify developers to update their workloads on their own time.
 - Develop a process, and automation for implementing Istio ugprades, and rollbacks.
   Start by listening to Pratima Nambiar from Salesforce in her [Istio Community Talk](https://youtu.be/j273hsoqza0?t=1308).
 
