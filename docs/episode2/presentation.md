@@ -64,7 +64,9 @@ We run these workshops periodically.  But the lab materials are free and availab
 
     Come join us in Valencia, Spain!
 
-- [Austin Roadshow](https://www.eventbrite.com/e/tetrates-austin-roadshow-tickets-313862710817) - April 21
+- Tetrate Roadshows
+    - [Seattle](https://www.eventbrite.com/e/tetrate-seattle-roadshow-tickets-315787517967) - April 14
+    - [Austin](https://www.eventbrite.com/e/tetrates-austin-roadshow-tickets-313862710817) - April 21
 
 - [April Eastern Canadian CNCF Meetup: K8s Local dev productivity tools & Setting up Istio Gateways](https://community.cncf.io/events/details/cncf-cloud-native-canada-presents-april-eastern-canadian-cncf-meetup-k8s-local-dev-productivity-tools-setting-up-istio-gateways/) - Cloud Native Canada
 
