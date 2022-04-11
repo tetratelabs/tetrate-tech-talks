@@ -14,7 +14,6 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 All episodes are scheduled for 9:00 AM Pacific time.
 
-- [Episode 2](episode2/) - April 8 2022:  **Upgrading Istio**
 - [Episode 3](episode3/) - April 15 2022.  **Topic to be announced**
 - [Episode 4](episode4/) - April 22 2022: **Exploring Kiali** with Lucas Ponce
 - Bye week - April 29 2022 is [IstioCon](https://events.istio.io/istiocon-2022/program/).
@@ -25,3 +24,4 @@ Stay tuned as we line up additional guests and topics!
 # Past Episodes:
 
 - [Episode 1](episode1/) - April 1 2022: **Onboarding VMs**, Guest: Bart van Bos
+- [Episode 2](episode2/) - April 8 2022:  **Upgrading Istio**

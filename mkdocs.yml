@@ -23,20 +23,21 @@ extra_css:
   - css/custom.css
 nav:
   - index.md
-  - Episode 1:
-    - Description: episode1/index.md
-    - Presentation: episode1/presentation.md
-    - Demo: episode1/demo/index.md
-  - Episode 2:
-    - Description: episode2/index.md
-    - Presentation: episode2/presentation.md
-    - Demo: episode2/demo/index.md
   - Episode 3:
     - Description: episode3/index.md
   - Episode 4:
     - Description: episode4/index.md
   - Episode 5:
     - Description: episode5/index.md
+  - Past Episodes:
+    - Episode 1:
+      - Description: episode1/index.md
+      - Presentation: episode1/presentation.md
+      - Demo: episode1/demo/index.md
+    - Episode 2:
+      - Description: episode2/index.md
+      - Presentation: episode2/presentation.md
+      - Demo: episode2/demo/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details
