@@ -1,8 +1,12 @@
 # Episode 3
 
-## Topic:  To be announced
+## Topic:  Adopting Istio at Salesforce
 
-## Guest: To be announced
+Tetrate's CEO, [Varun Talwar](https://www.linkedin.com/in/varuntalwar/) will be interviewing [Pratima Nambiar](https://www.linkedin.com/in/pnambiar/).
+
+## Guests: Pratima Nambia (Salesforce) and Varun Talwar (Tetrate)
+
+Pratima is a principal architect at Salesforce, and leads the teams responsible for service mesh.
 
 ## When
 
