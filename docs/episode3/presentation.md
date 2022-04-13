@@ -65,15 +65,23 @@ Register today!
 ---
 # Finally.. the episode
 
-- Adopting Istio at Salesforce with Pratima Nambiar & Varun Talwar
+<center>
+<h2>Adopting Istio at Salesforce</h2>
+<h3>with Pratima Nambiar & Varun Talwar</h3>
+</center>
 
 ---
 # My guests
 
 - Pratima Nambiar, Salesforce
-    - Past Istio Community Meeting, [May meetup](https://www.youtube.com/watch?v=j273hsoqza0)
+    - Pratima is a Principal Architect at Salesforce
+    - Salesforce was an early adopter of service mesh technology
+    - And Pratima was intimately involved in this effort, and continues to be
+    - Past Istio [Community Meeting](https://www.youtube.com/playlist?list=PL7wB27eZmdfcgqrjdftqafbOIWR630X4t), [May meetup](https://www.youtube.com/watch?v=j273hsoqza0)
 
 - Varun Talwar, CEO @ Tetrate
+    - Varun was on the team at Google that created Istio
+    - CEO at Tetrate, on a mission to bring service mesh to the enterprise
 
 ---
 # Interview Epilogue
