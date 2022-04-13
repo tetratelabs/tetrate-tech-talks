@@ -73,8 +73,7 @@ Register today!
 ---
 # My guests
 
-- Pratima Nambiar, Salesforce
-    - Pratima is a Principal Architect at Salesforce
+- Pratima Nambiar, Principal Architect @ Salesforce
     - Salesforce was an early adopter of service mesh technology
     - And Pratima was intimately involved in this effort, and continues to be
     - Past Istio [Community Meeting](https://www.youtube.com/playlist?list=PL7wB27eZmdfcgqrjdftqafbOIWR630X4t), [May meetup](https://www.youtube.com/watch?v=j273hsoqza0)
