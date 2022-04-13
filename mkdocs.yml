@@ -25,6 +25,7 @@ nav:
   - index.md
   - Episode 3:
     - Description: episode3/index.md
+    - Presentation: episode3/presentation.md
   - Episode 4:
     - Description: episode4/index.md
   - Episode 5:
