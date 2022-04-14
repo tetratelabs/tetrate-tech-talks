@@ -1,5 +1,7 @@
 # [Episode 3](presentation.md)
 
+[YouTube Livestream](https://www.youtube.com/watch?v=8X25GDrZqgI) | [LinkedIn Live](https://www.linkedin.com/video/event/urn:li:ugcPost:6919422861010989056/)
+
 ## Topic:  Adopting Istio at Salesforce
 
 Tetrate's CEO, [Varun Talwar](https://www.linkedin.com/in/varuntalwar/) will be interviewing [Pratima Nambiar](https://www.linkedin.com/in/pnambiar/).
