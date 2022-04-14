@@ -90,7 +90,7 @@ Register today!
 ---
 # Upcoming Episodes
 
-- April 22 - Kiali with Lucas Ponce
+- April 22 - [Kiali](https://kiali.io/) (_the console for Istio_) with Lucas Ponce
 - April 29 - Bye week (on account of IstioCon taking place that week)
 - May 6 - Web Assembly with Brian Sletten
 
