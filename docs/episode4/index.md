@@ -1,5 +1,7 @@
 # Episode 4
 
+[YouTube](https://www.youtube.com/watch?v=Y87cDA_JFfo) | [LinkedIn Live](https://www.linkedin.com/video/event/urn:li:ugcPost:6921839968310980608/)
+
 ## When
 
 Friday 2022.04.22 @ 9:00 AM Pacific time
