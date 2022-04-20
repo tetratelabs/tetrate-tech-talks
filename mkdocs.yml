@@ -25,6 +25,7 @@ nav:
   - index.md
   - Episode 4:
     - Description: episode4/index.md
+    - Introduction: episode4/introduction.md
   - Episode 5:
     - Description: episode5/index.md
   - Past Episodes:
