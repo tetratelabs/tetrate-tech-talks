@@ -46,6 +46,14 @@ If you're with us live, I invite you to say hello to everyone in the chat.
     - [Seattle](https://www.eventbrite.com/e/tetrate-seattle-roadshow-tickets-315787517967) - April 27
 
 ---
+# Istio Certification
+
+- [Certified Istio Administrator](https://academy.tetrate.io/courses/certified-istio-administrator)
+
+    If you already obtained your Kubernetes certifications, the next logical step is Istio certification.
+    When you're ready, we have the certification exam available for you to take.
+
+---
 # Finally.. the episode
 
 <center>
