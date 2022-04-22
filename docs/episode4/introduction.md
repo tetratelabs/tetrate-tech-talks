@@ -30,11 +30,18 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 - Onboarding VMs onto your mesh
 
 ---
+# [Event recaps](../../recaps/)
+
+ - Wasm workshop recap
+ - Austin Roadshow recap
+
+
+---
 # Upcoming Industry Events
 
 - [IstioCon 2022](https://events.istio.io/istiocon-2022/), April 25-29
 
-    - I **will** be conducting a workshop.. Istio 0 to 60. Join me!
+    - Peter Jausovec and I will be conducting a workshop.. Istio 0 to 60. Join us!
 
 - [ServiceMeshCon](https://events.linuxfoundation.org/servicemeshcon-europe/) & [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/), May 16 + 17-20
 
@@ -81,6 +88,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 
 - April 29 - Bye week (on account of IstioCon taking place that week)
 - May 6 - Web Assembly with Brian Sletten
+- May 13 - Envoy & Kafka with Adam Kotwasinski, from Workday
 
 ---
 # Join the conversation..
