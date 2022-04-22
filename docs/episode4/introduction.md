@@ -53,29 +53,14 @@ If you're with us live, I invite you to say hello to everyone in the chat.
     - [Seattle](https://www.eventbrite.com/e/tetrate-seattle-roadshow-tickets-315787517967) - April 27
 
 ---
-# Istio Certification
-
-- [Certified Istio Administrator](https://academy.tetrate.io/courses/certified-istio-administrator)
-
-    If you already obtained your Kubernetes certifications, the next logical step is Istio certification.
-    When you're ready, we have the certification exam available for you to take.
+# Our episode..
 
 ---
-# Finally.. the episode
+# My guest: Lucas Ponce
 
-<center>
-<h2>Exploring the Kiali console</h2>
-<h3>with Lucas Ponce</h3>
-</center>
-
----
-# My guest
-
-- Lucas Ponce
-    - Principal Software Engineer at RedHat
-    - Kiali project committer
-    - Lives in Madrid
-    - Watch Lucas' IstioCon 2021 [Kiali Workshop](https://events.istio.io/istiocon-2021/workshops/istio-cookbook-kiali-recipe/)
+  - Principal Software Engineer at RedHat
+  - Kiali project committer
+  - Lives in Madrid
 
 ---
 # Interview
@@ -84,11 +69,32 @@ If you're with us live, I invite you to say hello to everyone in the chat.
   - What questions _do you have_ for Lucas about Kiali in particular and service mesh in general?
 
 ---
+# Presentation
+
+<center>
+<h2>Exploring the Kiali console</h2>
+<h3>with Lucas Ponce</h3>
+</center>
+
+---
+# Learn more about Kiali
+
+  - Watch Lucas' IstioCon 2021 [Kiali Workshop](https://events.istio.io/istiocon-2021/workshops/istio-cookbook-kiali-recipe/)
+  - Work through the [Travel demo tutorial](https://kiali.io/docs/tutorials/travels/)
+---
 # Upcoming Episodes
 
 - April 29 - Bye week (on account of IstioCon taking place that week)
 - May 6 - Web Assembly with Brian Sletten
 - May 13 - Envoy & Kafka with Adam Kotwasinski, from Workday
+
+---
+# Istio Certification
+
+- [Certified Istio Administrator](https://academy.tetrate.io/courses/certified-istio-administrator)
+
+    If you already obtained your Kubernetes certifications, the next logical step is Istio certification.
+    When you're ready, we have the certification exam available for you to take.
 
 ---
 # Join the conversation..
