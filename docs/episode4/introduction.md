@@ -30,7 +30,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 - Onboarding VMs onto your mesh
 
 ---
-# [Event recaps](../../recaps/)
+# Event recaps
 
  - Wasm workshop recap
  - Austin Roadshow recap
