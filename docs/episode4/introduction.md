@@ -32,7 +32,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 ---
 # Event recaps
 
- - Wasm workshop recap
+ - [Wasm workshop](https://tetratelabs.github.io/wasm-workshop/) recap
  - Austin Roadshow recap
 
 
@@ -56,10 +56,10 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 # Our episode..
 
 ---
-# My guest: Lucas Ponce
+# My guest: [Lucas Ponce](https://www.linkedin.com/in/lucas-ponce-385533/)
 
   - Principal Software Engineer at RedHat
-  - Kiali project committer
+  - [Kiali](https://kiali.io/) project committer
   - Lives in Madrid
 
 ---
