@@ -35,6 +35,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
     - Eric Brewer gave a keynote presentation on zero-trust
     - Big announcement: [Istio applies to join the CNCF](https://istio.io/latest/blog/2022/istio-has-applied-to-join-the-cncf/)
     - Peter and I delivered our workshop "Istio 0 to 60"
+    - Apropos session: [Lessons Learned: Developing WASM filter for logging use-case](https://events.istio.io/istiocon-2022/sessions/developing-wasm-filter-for-logging/)
     - Session recordings on [crowdcast](https://www.crowdcast.io/e/istiocon-2022/).
 
         Final edited recordings will likely land on the [istiocon2022 youtube playlist](https://www.youtube.com/playlist?list=PL7wB27eZmdffL2cyYauEuxcOTyGtSv4gy)
