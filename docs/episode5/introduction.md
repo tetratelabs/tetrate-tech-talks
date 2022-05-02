@@ -38,7 +38,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
     - Apropos session: [Lessons Learned: Developing WASM filter for logging use-case](https://events.istio.io/istiocon-2022/sessions/developing-wasm-filter-for-logging/)
     - Session recordings on [crowdcast](https://www.crowdcast.io/e/istiocon-2022/).
 
-        Final edited recordings will likely land on the [istiocon2022 youtube playlist](https://www.youtube.com/playlist?list=PL7wB27eZmdffL2cyYauEuxcOTyGtSv4gy)
+        Final edited recordings will land on the [istiocon2022 youtube playlist](https://www.youtube.com/playlist?list=PL7wB27eZmdffL2cyYauEuxcOTyGtSv4gy)
 
 ---
 # Upcoming Industry Events
