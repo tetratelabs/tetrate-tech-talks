@@ -25,7 +25,7 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 ---
 # Previously on Tetrate Tech Talks..
 
-- April 22 - [Exporing the Kiali console](../../episode4/) with Lucas Ponce
+- April 22 - [Exploring the Kiali console](../../episode4/) with Lucas Ponce
 - All past episodes are on our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTlOkjWDJBQYtjcc9WPk4E4F).
 
 ---
