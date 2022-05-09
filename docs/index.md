@@ -15,6 +15,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 All episodes are scheduled for 9:00 AM Pacific time.
 
 - [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
+- [Episode 7](episode7/) - May 20 2022: **KubeCon report**
 
 Stay tuned as we line up additional guests and topics!
 
