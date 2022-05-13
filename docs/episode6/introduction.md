@@ -51,6 +51,11 @@ Adam is a principal software development engineer at Workday.
 # Presentation: Envoy & Kafka
 
 ---
+# Related presentation recording
+
+Recorded talk: [Scaling Istio](https://youtu.be/wcJPC_bXYBA) by Cathal Conroy of Workday
+
+---
 # Upcoming Episodes
 
 - May 20 - KubeCon EU report
