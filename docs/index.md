@@ -14,7 +14,6 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 All episodes are scheduled for 9:00 AM Pacific time.
 
-- [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
 - [Episode 7](episode7/) - May 20 2022: **KubeCon report**
 
 Stay tuned as we line up additional guests and topics!
@@ -27,3 +26,4 @@ Stay tuned as we line up additional guests and topics!
 - [Episode 4](episode4/) - April 22 2022: **Exploring Kiali** with Lucas Ponce
 - Bye week - April 29 2022 is [IstioCon](https://events.istio.io/istiocon-2022/program/).
 - [Episode 5](episode5/) - May 6 2022: **Web Assembly** with Brian Sletten
+- [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
