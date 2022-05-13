@@ -1,4 +1,4 @@
-# Episode 6
+# [Episode 6](introduction.md)
 
 ## When
 
