@@ -1,5 +1,11 @@
 # [Episode 6](introduction.md)
 
+## Resources
+
+1. [Adam's presentation](https://www.slideshare.net/AdamKotwasinskiWorkd/envoy-and-kafka){target=_blank} (slideshare)
+1. [broker-filter blog](https://adam-kotwasinski.medium.com/deploying-envoy-and-kafka-8aa7513ec0a0){target=_blank}
+1.  [mesh-filter blog](https://adam-kotwasinski.medium.com/kafka-mesh-filter-in-envoy-a70b3aefcdef){target=_blank}
+
 ## When
 
 Friday 2022.05.13 @ 9:00 AM Pacific time
