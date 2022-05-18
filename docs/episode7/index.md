@@ -1,8 +1,10 @@
 # Episode 7
 
+Live Stream: [YouTube](https://youtu.be/sY8lwVziYwY) | [LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6929783151477096448/)
+
 ## When
 
-Friday 2022.05.20 @ 9:00 AM Pacific time
+Friday 2022.05.20 @ 9:00 AM Pacific time / 6:00 PM CEST (Valencia, Spain).
 
 ## Topic:  KubeCon EU Report
 
