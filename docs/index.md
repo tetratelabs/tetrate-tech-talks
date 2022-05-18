@@ -12,7 +12,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 # Upcoming Episodes
 
-All episodes are scheduled for 9:00 AM Pacific time.
+Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
 - [**Special Episode**](envoygw/) - May 19 2022: **Fireside chat on Envoy Gateway**, with Matt Klein, Louis Ryan, Joe Beda, and Varun Talwar
 - [Episode 7](episode7/) - May 20 2022: **KubeCon report**
