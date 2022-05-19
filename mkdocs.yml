@@ -23,8 +23,6 @@ extra_css:
   - css/custom.css
 nav:
   - index.md
-  - Fireside Chat:
-    - Description: envoygw/index.md
   - Episode 7:
     - Description: episode7/index.md
   - Past Episodes:
@@ -48,6 +46,8 @@ nav:
     - Episode 6:
       - Description: episode6/index.md
       - Introduction: episode6/introduction.md
+    - Fireside Chat:
+      - Description: envoygw/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details
