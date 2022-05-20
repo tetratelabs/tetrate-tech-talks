@@ -53,7 +53,7 @@ Tetrate hosted its own [colocated event](https://www.tetrate.io/event/tetrate-en
 # Killer Coda
 
 - [Blog Entry](https://itnext.io/katacoda-alternative-1d33599af75f)
-- Experimental environments: [KillerCoda](https://killercoda.com/eitansuez)
+- Experimental environments: [KillerCoda](https://killercoda.com/eitansuez) - https://killercoda.com/eitansuez
 
 ---
 # Announcement: Envoy Gateway
