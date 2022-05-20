@@ -1,4 +1,4 @@
-# Episode 7
+# [Episode 7](introduction.md)
 
 Live Stream: [YouTube](https://youtu.be/sY8lwVziYwY) | [LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6929783151477096448/)
 
