@@ -91,6 +91,7 @@ Links:
 - Our team
 - Community interactions
 - Sessions
+    - [From Kubernetes to Paas..](https://kccnceu2022.sched.com/event/ytn0/from-kubernetes-to-paas-to-err-whats-next-daniel-bryant-ambassador-labs?iframe=no)
 - Photos
 
 ---
