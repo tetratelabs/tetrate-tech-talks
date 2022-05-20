@@ -91,7 +91,7 @@ Links:
 - Our team
 - Community interactions
 - Sessions
-    - [From Kubernetes to Paas..](https://kccnceu2022.sched.com/event/ytn0/from-kubernetes-to-paas-to-err-whats-next-daniel-bryant-ambassador-labs?iframe=no)
+    - [From Kubernetes to PaaS..](https://kccnceu2022.sched.com/event/ytn0/from-kubernetes-to-paas-to-err-whats-next-daniel-bryant-ambassador-labs?iframe=no)
     - Conference sessions and keynotes will be available publicly on the CNCF YouTube channel by Monday, 6 June.
 - Photos
 
