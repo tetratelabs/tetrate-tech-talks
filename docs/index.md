@@ -14,8 +14,6 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
-- [Episode 7](episode7/) - May 20 2022: **KubeCon report**
-
 Stay tuned as we line up additional guests and topics!
 
 # Past Episodes:
@@ -28,3 +26,4 @@ Stay tuned as we line up additional guests and topics!
 - [Episode 5](episode5/) - May 6 2022: **Web Assembly** with Brian Sletten
 - [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
 - [**Special Episode**](envoygw/) - May 19 2022: **Fireside chat on Envoy Gateway**, with Matt Klein, Louis Ryan, Joe Beda, and Varun Talwar
+- [Episode 7](episode7/) - May 20 2022: **KubeCon report**
