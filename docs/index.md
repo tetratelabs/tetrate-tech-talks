@@ -14,6 +14,8 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
+- [Episode 8](episode8/) - May 27 2022: **Istio Primary-Remote deployment model**
+
 Stay tuned as we line up additional guests and topics!
 
 # Past Episodes:
