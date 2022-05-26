@@ -4,7 +4,7 @@ More specifically, [Install Primary-Remote](https://istio.io/latest/docs/setup/i
 
 ## Create the two clusters:
 
-1. primary, name "primary-cluster"
+1. Primary, name "primary-cluster"
 
     ```shell
     gcloud container clusters create primary-cluster \
@@ -15,7 +15,7 @@ More specifically, [Install Primary-Remote](https://istio.io/latest/docs/setup/i
       --zone us-central1-a
     ```
 
-1. remote, name "remote-cluster"
+1. Remote, name "remote-cluster"
 
     ```shell
     gcloud container clusters create remote-cluster \
@@ -173,3 +173,6 @@ Follow the instructions on the page to:
 - Deploy helloworld v1 to the primary cluster and v2 to the remote cluster.
 - Deploy the sleep pod to both clusters.
 
+## Explore [locality load balancing](https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/)
+
+Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.

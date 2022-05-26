@@ -1,5 +1,7 @@
 # Episode 8
 
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6935608636043919360/) | [YouTube](https://www.youtube.com/watch?v=g044E5eyGsI)
+
 ## When
 
 Friday 2022.05.27 @ 9:00 AM Pacific time
