@@ -105,8 +105,8 @@ Below is the adaptation of those steps to the specific cluster names used in thi
 Define environment variables for each of the two Kubernetes contexts:
 
 ```shell
-export CTX_CLUSTER1=gke_eitan-tetrate_us-central1-a_primary-cluster
-export CTX_CLUSTER2=gke_eitan-tetrate_us-central1-b_remote-cluster
+export CTX_PRIMARY=gke_eitan-tetrate_us-central1-a_primary-cluster
+export CTX_REMOTE=gke_eitan-tetrate_us-central1-b_remote-cluster
 ```
 
 Generate the istio installation manifest file with the IstioOperator custom resource:
@@ -128,7 +128,7 @@ EOF
 Install Istio on the primary cluster:
 
 ```shell
-istioctl install --context="${CTX_CLUSTER1}" -f primary-cluster.yaml
+istioctl install --context="${CTX_PRIMARY}" -f primary-cluster.yaml
 ```
 
 Install the east-west gateway:
@@ -136,17 +136,17 @@ Install the east-west gateway:
 ```shell
 samples/multicluster/gen-eastwest-gateway.sh \
     --mesh mesh1 --cluster primary-cluster --network network1 | \
-    istioctl --context="${CTX_CLUSTER1}" install -y -f -
+    istioctl --context="${CTX_PRIMARY}" install -y -f -
 ```
 
 ```shell
-kubectl --context="${CTX_CLUSTER1}" get svc istio-eastwestgateway -n istio-system
+kubectl --context="${CTX_PRIMARY}" get svc istio-eastwestgateway -n istio-system
 ```
 
 Expose the control plane to cluster 2:
 
 ```shell
-kubectl apply --context="${CTX_CLUSTER1}" -n istio-system -f \
+kubectl apply --context="${CTX_PRIMARY}" -n istio-system -f \
     samples/multicluster/expose-istiod.yaml
 ```
 
@@ -154,16 +154,16 @@ Allow the control plane to communicate with the kube api server on the remote cl
 
 ```shell
 istioctl x create-remote-secret \
-    --context="${CTX_CLUSTER2}" \
+    --context="${CTX_REMOTE}" \
     --name=remote-cluster | \
-    kubectl apply -f - --context="${CTX_CLUSTER1}"
+    kubectl apply -f - --context="${CTX_PRIMARY}"
 ```
 
 Install Istio on the remote cluster, configured to talk to the control plane on the primary:
 
 ```shell
 export DISCOVERY_ADDRESS=$(kubectl \
-    --context="${CTX_CLUSTER1}" \
+    --context="${CTX_PRIMARY}" \
     -n istio-system get svc istio-eastwestgateway \
     -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 ```
@@ -186,7 +186,7 @@ EOF
 And finally:
 
 ```shell
-istioctl install --context="${CTX_CLUSTER2}" -f remote-cluster.yaml
+istioctl install --context="${CTX_REMOTE}" -f remote-cluster.yaml
 ```
 
 ## [Verify the installation](https://istio.io/latest/docs/setup/install/multicluster/verify/)
@@ -229,8 +229,8 @@ EOF
 Test failover by draining the listeners on the sidecar of the hello world pod in the primary zone:
 
 ```shell
-kubectl --context="${CTX_CLUSTER1}" exec \
-  "$(kubectl get pod --context="${CTX_CLUSTER1}" -n sample -l app=helloworld \
+kubectl --context="${CTX_PRIMARY}" exec \
+  "$(kubectl get pod --context="${CTX_PRIMARY}" -n sample -l app=helloworld \
   -l version=v1 -o jsonpath='{.items[0].metadata.name}')" \
   -n sample -c istio-proxy -- curl -sSL -X POST 127.0.0.1:15000/drain_listeners
 ```
