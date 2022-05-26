@@ -13,7 +13,7 @@
     
     
       
-        <title>Demo - Tetrate Tech Talks</title>
+        <title>Introduction - Tetrate Tech Talks</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#upgrading-istio" class="md-skip">
+        <a href="#about-tetrate-tech-talks" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Demo
+              Introduction
             
           </span>
         </div>
@@ -241,12 +241,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -269,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../episode8/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Description
       </a>
     </li>
@@ -281,11 +283,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../episode8/introduction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introduction
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#httpstetratelabsgithubiotetrate-tech-talks" class="md-nav__link">
+    https://tetratelabs.github.io/tetrate-tech-talks/
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -351,14 +394,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -454,14 +495,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -484,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../episode2/" class="md-nav__link">
         Description
       </a>
     </li>
@@ -498,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../presentation/" class="md-nav__link">
+      <a href="../../episode2/presentation/" class="md-nav__link">
         Presentation
       </a>
     </li>
@@ -510,163 +549,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Demo
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../episode2/demo/" class="md-nav__link">
         Demo
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-k8s-cluster" class="md-nav__link">
-    Create a K8s Cluster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-setup" class="md-nav__link">
-    Client Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-your-path" class="md-nav__link">
-    Setting your PATH
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-istio" class="md-nav__link">
-    Install Istio
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#label-the-default-namespace" class="md-nav__link">
-    Label the default namespace
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-bookinfo" class="md-nav__link">
-    Deploy BookInfo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-that-workloads-use-version-1125" class="md-nav__link">
-    Verifying that workloads use version 1.12.5
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-directories" class="md-nav__link">
-    Switch directories
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-istio-version-1132" class="md-nav__link">
-    Install Istio version 1.13.2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-namespace-label" class="md-nav__link">
-    Update namespace label
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-the-deployments-in-the-default-namespace" class="md-nav__link">
-    Restart the deployments in the default namespace
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#teardown-the-old-version" class="md-nav__link">
-    Teardown the old version
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-revision-tags" class="md-nav__link">
-    Using Revision Tags
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-about-the-gateways" class="md-nav__link">
-    What about the Gateways?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#closing-thoughts" class="md-nav__link">
-    Closing thoughts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1050,119 +937,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-k8s-cluster" class="md-nav__link">
-    Create a K8s Cluster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-setup" class="md-nav__link">
-    Client Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-your-path" class="md-nav__link">
-    Setting your PATH
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-istio" class="md-nav__link">
-    Install Istio
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#label-the-default-namespace" class="md-nav__link">
-    Label the default namespace
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-bookinfo" class="md-nav__link">
-    Deploy BookInfo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-that-workloads-use-version-1125" class="md-nav__link">
-    Verifying that workloads use version 1.12.5
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-directories" class="md-nav__link">
-    Switch directories
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-istio-version-1132" class="md-nav__link">
-    Install Istio version 1.13.2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-namespace-label" class="md-nav__link">
-    Update namespace label
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-the-deployments-in-the-default-namespace" class="md-nav__link">
-    Restart the deployments in the default namespace
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#teardown-the-old-version" class="md-nav__link">
-    Teardown the old version
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-revision-tags" class="md-nav__link">
-    Using Revision Tags
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-about-the-gateways" class="md-nav__link">
-    What about the Gateways?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#closing-thoughts" class="md-nav__link">
-    Closing thoughts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#httpstetratelabsgithubiotetrate-tech-talks" class="md-nav__link">
+    https://tetratelabs.github.io/tetrate-tech-talks/
   </a>
   
 </li>
@@ -1179,195 +955,61 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/tetratelabs/tetrate-tech-talks/edit/master/docs/episode2/demo/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/tetratelabs/tetrate-tech-talks/edit/master/docs/episode8/introduction.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="upgrading-istio">Upgrading Istio<a class="headerlink" href="#upgrading-istio" title="Permanent link">&para;</a></h1>
-<p>This document demonstrates upgrading Istio in a way that allows operators to be in control of the transition of workloads from one version to the next.</p>
-<p>This document is an adaptation of the document entitled <a href="https://istio.io/latest/docs/setup/upgrade/canary/">Canary Upgrades</a> from the official Istio documentation.</p>
-<p>The <a href="https://istio.io/latest/docs/examples/bookinfo/">BookInfo</a> sample application will serve as the workload under test.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><a href="https://istio.io/latest/docs/releases/feature-stages/#core">Feature status</a> of Revision Based Upgrades is <strong>alpha</strong></p>
-</div>
-<p>In this exercise, we will:</p>
+<hr />
+<h1 id="about-tetrate-tech-talks">About Tetrate Tech Talks<a class="headerlink" href="#about-tetrate-tech-talks" title="Permanent link">&para;</a></h1>
+<p>A new series of broadcasts that runs every Friday at 9:00 AM Pacific
+  streamed to YouTube and to LinkedIn Live.</p>
+<h2 id="httpstetratelabsgithubiotetrate-tech-talks">https://tetratelabs.github.io/tetrate-tech-talks/<a class="headerlink" href="#httpstetratelabsgithubiotetrate-tech-talks" title="Permanent link">&para;</a></h2>
+<p>Objectives:</p>
 <ul>
-<li>Install a Kubernetes cluster</li>
-<li>Install Istio v1.12.5</li>
-<li>Deploy the BookInfo sample application to the <code>default</code> namespace.</li>
+<li>Learning and sharing knowledge</li>
+<li>Getting to know the diverse members of the service mesh community</li>
+<li>Have fun!</li>
 </ul>
-<p>Next, we:</p>
+<p>Episodes present a technical topic and feature a guest.</p>
+<hr />
+<h1 id="im-your-host-eitan-suez">I'm your host, Eitan Suez<a class="headerlink" href="#im-your-host-eitan-suez" title="Permanent link">&para;</a></h1>
+<p>I work at Tetrate, and I like to talk tech.</p>
+<p>If you're with us live, I invite you to say hello to everyone in the chat.</p>
+<hr />
+<h1 id="previously-on-tetrate-tech-talks">Previously on Tetrate Tech Talks..<a class="headerlink" href="#previously-on-tetrate-tech-talks" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Install Istio v1.13.2, triggering solely the upgrade of the ingress gateway (not the workloads)</li>
-<li>Demonstrate namespace labeling as the mechanism for controlling the desired version of Istio to use for workloads in that namespace.</li>
-<li>Teardown previous version of Istio, completing the upgrade.</li>
+<li>May 19 - <a href="../../envoygw/">Fireside chat on Envoy Gateway</a></li>
+<li>May 20 - <a href="../../episode7/">KubeCon EU Report</a> from Valencia, Spain</li>
+<li>All past episodes are on our <a href="https://www.youtube.com/playlist?list=PLm51GPKRAmTlOkjWDJBQYtjcc9WPk4E4F">YouTube playlist</a>.</li>
 </ul>
-<p>Finally, we will demonstrate an alternative to labeling namespaces directly, by using what Istio calls <a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-tag">Revision Tags</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the instructions that follow, I use GCP as my infastructure, but feel free to use any Kubernetes you like.</p>
-</div>
-<h2 id="create-a-k8s-cluster">Create a K8s Cluster<a class="headerlink" href="#create-a-k8s-cluster" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcloud container clusters create my-istio-cluster <span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --cluster-version latest <span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --machine-type <span class="s2">&quot;n1-standard-2&quot;</span> <span class="se">\</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  --num-nodes <span class="s2">&quot;3&quot;</span> <span class="se">\</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  --network <span class="s2">&quot;default&quot;</span>
-</code></pre></div>
-<p>Wait until cluster is ready.</p>
-<h2 id="client-setup">Client Setup<a class="headerlink" href="#client-setup" title="Permanent link">&para;</a></h2>
-<p>In a workspace directory of your choice, download two Istio releases, 1.12.5 and 1.13.2.</p>
-<p>Be sure to use the hardware architecture matching your workstation:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl -L https://istio.io/downloadIstio <span class="p">|</span> <span class="nv">ISTIO_VERSION</span><span class="o">=</span><span class="m">1</span>.12.5 <span class="nv">TARGET_ARCH</span><span class="o">=</span>arm64 sh -
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl -L https://istio.io/downloadIstio <span class="p">|</span> <span class="nv">ISTIO_VERSION</span><span class="o">=</span><span class="m">1</span>.13.2 <span class="nv">TARGET_ARCH</span><span class="o">=</span>arm64 sh -
-</code></pre></div>
-<h3 id="setting-your-path">Setting your PATH<a class="headerlink" href="#setting-your-path" title="Permanent link">&para;</a></h3>
-<p>I use <a href="https://direnv.net/">direnv</a> to easily update my PATH so that istioctl points to version 1.12.5 or version 1.13.2 as a function of the directory that i navigate to.</p>
-<p>Given a file named <code>.envrc</code> in the folder <code>istio-1.12.5</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/sh</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>./bin:<span class="nv">$PATH</span>
-</code></pre></div>
-<p>I can run <code>direnv allow</code>, and note that running <code>istioctl version</code> from that directory returns <code>1.12.5</code>.</p>
-<p>Likewise, the same file in the <code>istio-1.13.2</code> directory allows me to quickly switch to that version.</p>
-<h2 id="install-istio">Install Istio<a class="headerlink" href="#install-istio" title="Permanent link">&para;</a></h2>
-<p><a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-experimental-precheck">Pre-check</a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>istioctl x precheck
-</code></pre></div>
-<p>Install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-12-5
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>k get pods -n istio-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>k get svc -n istio-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>k get mutatingwebhookconfigurations
-</code></pre></div>
-<p>Check the ingressgateway Istio version:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>istioctl proxy-status
-</code></pre></div>
-<h2 id="label-the-default-namespace">Label the default namespace<a class="headerlink" href="#label-the-default-namespace" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>k label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-12-5
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>k get ns -Listio.io/rev
-</code></pre></div>
-<h2 id="deploy-bookinfo">Deploy BookInfo<a class="headerlink" href="#deploy-bookinfo" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>kubectl <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
-</code></pre></div>
-<p>Configure ingress:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">GATEWAY_IP</span><span class="o">=</span><span class="k">$(</span>kubectl get svc -n istio-system istio-ingressgateway -ojsonpath<span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
-</code></pre></div>
-<p>Open a browser and visit the BookInfo product page (at <code>/productpage</code>).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>curl <span class="nv">$GATEWAY_IP</span>/productpage
-</code></pre></div>
-<h2 id="verifying-that-workloads-use-version-1125">Verifying that workloads use version 1.12.5<a class="headerlink" href="#verifying-that-workloads-use-version-1125" title="Permanent link">&para;</a></h2>
-<ol>
+<hr />
+<h1 id="our-episode">Our episode..<a class="headerlink" href="#our-episode" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Istio primary-remote deployment model</li>
+<li><a href="../demo/">Presentation and demo</a> by Eitan Suez</li>
+</ul>
+<hr />
+<h1 id="upcoming-industry-events">Upcoming Industry Events<a class="headerlink" href="#upcoming-industry-events" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://www.tetrate.io/events/">Tetrate Events</a></li>
+</ul>
+<hr />
+<h1 id="istio-certification">Istio Certification<a class="headerlink" href="#istio-certification" title="Permanent link">&para;</a></h1>
+<ul>
 <li>
-<p>With <code>istioctl proxy-status</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>istioctl proxy-status
-</code></pre></div>
+<p><a href="https://academy.tetrate.io/courses/certified-istio-administrator">Certified Istio Administrator by Tetrate</a></p>
+<p>If you already obtained your Kubernetes certifications, the next logical step is Istio certification.
+When you're ready, we have the certification exam available for you to take.</p>
 </li>
-<li>
-<p>Checking the server_info endpoint of a sidecar:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>istioctl dashboard envoy deployment/details-v1.default
-</code></pre></div>
-<p>And check that the ANNOTATIONS revision is 1-12-5</p>
-</li>
-<li>
-<p>Describe the pod</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>k describe pod details-v1-&lt;tab&gt;
-</code></pre></div>
-</li>
-</ol>
-<h2 id="switch-directories">Switch directories<a class="headerlink" href="#switch-directories" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">cd</span> ../istio-1.13.2
-</code></pre></div>
-<p>Make sure your PATH now points to version 1.13.2 of the <code>istioctl</code> CLI:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl version
-</code></pre></div>
-<h2 id="install-istio-version-1132">Install Istio version 1.13.2<a class="headerlink" href="#install-istio-version-1132" title="Permanent link">&para;</a></h2>
-<p>Pre-check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>istioctl x precheck
-</code></pre></div>
-<p>Install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>istioctl install --set <span class="nv">revision</span><span class="o">=</span><span class="m">1</span>-13-2
-</code></pre></div>
-<p><a href="https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/">Analyze</a>?:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>istioctl analyze
-</code></pre></div>
-<p>Also, see the <code>istioctl analyze</code> <a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-analyze">command reference</a>, and
-<a href="https://istio.io/latest/docs/reference/config/analysis/">configuration analysis messsages</a>.  Possible <a href="https://github.com/istio/istio/issues/22698">false positive</a> and <a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway">Gateway resource</a>.</p>
-<ul>
-<li>Both 1-13-2 and 1-12-5 istiod's are installed</li>
-<li>ingressgateway has been upgraded to 1.13.2</li>
-<li>Pods still use 1-12-5</li>
 </ul>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>k get pods -n istio-system
-</code></pre></div>
-<p>And:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>istioctl proxy-status
-</code></pre></div>
-<h2 id="update-namespace-label">Update namespace label<a class="headerlink" href="#update-namespace-label" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl label namespace default istio.io/rev<span class="o">=</span><span class="m">1</span>-13-2 --overwrite
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>k get ns -Listio.io/rev
-</code></pre></div>
-<h2 id="restart-the-deployments-in-the-default-namespace">Restart the deployments in the default namespace<a class="headerlink" href="#restart-the-deployments-in-the-default-namespace" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>kubectl rollout restart deployment -n default
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>istioctl proxy-status
-</code></pre></div>
-<h2 id="teardown-the-old-version">Teardown the old version<a class="headerlink" href="#teardown-the-old-version" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>istioctl x uninstall --revision <span class="m">1</span>-12-5
-</code></pre></div>
-<p>Verify that the bookinfo application is still alive and well.</p>
-<h2 id="using-revision-tags">Using Revision Tags<a class="headerlink" href="#using-revision-tags" title="Permanent link">&para;</a></h2>
-<p>Instead of specifying the actual revision we want, we use a semantic name, like <code>prod</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>k label ns default istio.io/rev<span class="o">=</span>prod --overwrite
-</code></pre></div>
-<p>And then associate prod to a revision:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-13-2
-</code></pre></div>
-<p>Check:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>istioctl tag list
-</code></pre></div>
-<p>To change what prod means, we associate a different revision to it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>istioctl tag <span class="nb">set</span> prod --revision <span class="m">1</span>-12-5 --overwrite
-</code></pre></div>
-<h2 id="what-about-the-gateways">What about the Gateways?<a class="headerlink" href="#what-about-the-gateways" title="Permanent link">&para;</a></h2>
-<p>Gateways can be canary-ugraded instead of using in-place upgrades.</p>
-<p>Here's an outline of the recipe:</p>
-<ol>
-<li>Install istiod by itself (no gateway) by using the <a href="https://istio.io/latest/docs/setup/additional-setup/config-profiles/">minimal profile</a>.</li>
-<li>Install the gateway separately by using the empty profile.</li>
-<li>Can canary-deploy the gateway by creating a second deployment, and labeling the deployment with <code>istio.io/rev</code> to control which sidecar version is bundled into the pod.</li>
-<li>This is explained in more detail <a href="https://istio.io/latest/docs/setup/additional-setup/gateway/">here</a>.</li>
-</ol>
-<h2 id="closing-thoughts">Closing thoughts<a class="headerlink" href="#closing-thoughts" title="Permanent link">&para;</a></h2>
+<hr />
+<h1 id="join-the-conversation">Join the conversation..<a class="headerlink" href="#join-the-conversation" title="Permanent link">&para;</a></h1>
+<p>..on our <a href="https://tetrate-community.slack.com/">Slack channel</a>:</p>
+<h2 id="httpstetrate-communityslackcom">https://tetrate-community.slack.com/<a class="headerlink" href="#httpstetrate-communityslackcom" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Operators can make available a new version of Istio and notify developers to update their workloads on their own time.</li>
-<li>Develop a process, and automation for implementing Istio ugprades, and rollbacks.
-  Start by listening to Pratima Nambiar from Salesforce in her <a href="https://youtu.be/j273hsoqza0?t=1308">Istio Community Talk</a>.</li>
-</ul>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://istio.io/latest/docs/setup/upgrade/canary/">Canary upgrades</a></li>
-<li><a href="https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-tag">Revision tags</a></li>
-<li><a href="https://istio.io/latest/blog/2021/revision-tags/">Blog entry on revision tags</a></li>
+<li>recent conversation about doing a demo on multi-cluster deployment</li>
 </ul>
 
               
@@ -1387,7 +1029,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../presentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Presentation" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Description" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1396,14 +1038,14 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Presentation
+              Description
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../episode3/" class="md-footer__link md-footer__link--next" aria-label="Next: Description" rel="next">
+        <a href="../../episode9/" class="md-footer__link md-footer__link--next" aria-label="Next: Description" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
