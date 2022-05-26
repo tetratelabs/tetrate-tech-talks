@@ -202,6 +202,8 @@ Follow the instructions on the page to:
 
 Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.
 
+Configure a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule) in the primary cluster:
+
 ```shell
 kubectl --context="${CTX_PRIMARY}" apply -n sample -f - <<EOF
 apiVersion: networking.istio.io/v1beta1
@@ -219,8 +221,8 @@ spec:
       localityLbSetting:
         enabled: true
         failover:
-          - from: us-central1-a
-            to: us-central1-b
+        - from: us-central1/us-central1-a
+          to: us-central1/us-central1-b
     outlierDetection:
       consecutive5xxErrors: 1
       interval: 1s
