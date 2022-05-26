@@ -51,6 +51,10 @@ gcloud compute firewall-rules create istio-multicluster-test-pods \
 
 1. Per the instructions, create the root ca.
 
+    ```shell
+    make -f ../tools/certs/Makefile.selfsigned.mk root-ca
+    ```
+
 1. Create the intermediate certs for each of the two clusters:
 
     ```shell
@@ -64,6 +68,25 @@ gcloud compute firewall-rules create istio-multicluster-test-pods \
     ```
 
 1. Per the instructions, create the `cacerts` secret in each cluster.
+
+    ```shell
+    kubectl create secret generic cacerts -n istio-system \
+          --from-file=primary-cluster/ca-cert.pem \
+          --from-file=primary-cluster/ca-key.pem \
+          --from-file=primary-cluster/root-cert.pem \
+          --from-file=primary-cluster/cert-chain.pem
+    ```
+
+    And:
+
+    ```shell
+    kubectl create secret generic cacerts -n istio-system \
+          --from-file=remote-cluster/ca-cert.pem \
+          --from-file=remote-cluster/ca-key.pem \
+          --from-file=remote-cluster/root-cert.pem \
+          --from-file=remote-cluster/cert-chain.pem
+    ```
+
 
 ## Install Istio et al
 
@@ -176,3 +199,39 @@ Follow the instructions on the page to:
 ## Explore [locality load balancing](https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/)
 
 Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.
+
+```shell
+kubectl --context="${CTX_PRIMARY}" apply -n sample -f - <<EOF
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: helloworld
+spec:
+  host: helloworld.sample.svc.cluster.local
+  trafficPolicy:
+    connectionPool:
+      http:
+        maxRequestsPerConnection: 1
+    loadBalancer:
+      simple: ROUND_ROBIN
+      localityLbSetting:
+        enabled: true
+        failover:
+          - from: us-central1-a
+            to: us-central1-b
+    outlierDetection:
+      consecutive5xxErrors: 1
+      interval: 1s
+      baseEjectionTime: 1m
+EOF
+```
+
+Test failover by draining the listeners
+
+
+```shell
+kubectl --context="${CTX_CLUSTER1}" exec \
+  "$(kubectl get pod --context="${CTX_CLUSTER1}" -n sample -l app=helloworld \
+  -l version=v1 -o jsonpath='{.items[0].metadata.name}')" \
+  -n sample -c istio-proxy -- curl -sSL -X POST 127.0.0.1:15000/drain_listeners
+```
