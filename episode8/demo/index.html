@@ -873,6 +873,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#explore-locality-load-balancing" class="md-nav__link">
+    Explore locality load balancing
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -896,7 +903,7 @@
 <h2 id="create-the-two-clusters">Create the two clusters:<a class="headerlink" href="#create-the-two-clusters" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>primary, name "primary-cluster"</p>
+<p>Primary, name "primary-cluster"</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcloud container clusters create primary-cluster <span class="se">\</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --cluster-version latest <span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --machine-type <span class="s2">&quot;n1-standard-2&quot;</span> <span class="se">\</span>
@@ -906,7 +913,7 @@
 </code></pre></div>
 </li>
 <li>
-<p>remote, name "remote-cluster"</p>
+<p>Remote, name "remote-cluster"</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gcloud container clusters create remote-cluster <span class="se">\</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  --cluster-version latest <span class="se">\</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  --machine-type <span class="s2">&quot;n1-standard-2&quot;</span> <span class="se">\</span>
@@ -1025,6 +1032,8 @@
 <li>Deploy helloworld v1 to the primary cluster and v2 to the remote cluster.</li>
 <li>Deploy the sleep pod to both clusters.</li>
 </ul>
+<h2 id="explore-locality-load-balancing">Explore <a href="https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/">locality load balancing</a><a class="headerlink" href="#explore-locality-load-balancing" title="Permanent link">&para;</a></h2>
+<p>Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.</p>
 
               
             </article>
