@@ -940,6 +940,19 @@
     Explore locality load balancing
   </a>
   
+    <nav class="md-nav" aria-label="Explore locality load balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-failover" class="md-nav__link">
+    Test failover
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1110,39 +1123,52 @@
 <li>Deploy helloworld v1 to the primary cluster and v2 to the remote cluster.</li>
 <li>Deploy the sleep pod to both clusters.</li>
 </ul>
+<p>These environment variables will help:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER1</span><span class="o">=</span>gke_eitan-tetrate_us-central1-a_primary-cluster
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER2</span><span class="o">=</span>gke_eitan-tetrate_us-central1-b_remote-cluster
+</code></pre></div>
 <h2 id="explore-locality-load-balancing">Explore <a href="https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/">locality load balancing</a><a class="headerlink" href="#explore-locality-load-balancing" title="Permanent link">&para;</a></h2>
 <p>Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.</p>
 <p>Configure a <a href="https://istio.io/latest/docs/reference/config/networking/destination-rule">DestinationRule</a> in the primary cluster:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> apply -n sample -f - <span class="s">&lt;&lt;EOF</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="s">apiVersion: networking.istio.io/v1beta1</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="s">kind: DestinationRule</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="s">metadata:</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="s">  name: helloworld</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="s">spec:</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="s">  host: helloworld.sample.svc.cluster.local</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="s">  trafficPolicy:</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="s">    connectionPool:</span>
-<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="s">      http:</span>
-<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="s">        maxRequestsPerConnection: 1</span>
-<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="s">    loadBalancer:</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="s">      simple: ROUND_ROBIN</span>
-<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="s">      localityLbSetting:</span>
-<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="s">        enabled: true</span>
-<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="s">        failover:</span>
-<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="s">        - from: us-central1/us-central1-a</span>
-<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="s">          to: us-central1/us-central1-b</span>
-<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="s">    outlierDetection:</span>
-<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="s">      consecutive5xxErrors: 1</span>
-<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="s">      interval: 1s</span>
-<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="s">      baseEjectionTime: 1m</span>
-<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="s">EOF</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> apply -n sample -f - <span class="s">&lt;&lt;EOF</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s">apiVersion: networking.istio.io/v1beta1</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s">kind: DestinationRule</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="s">metadata:</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="s">  name: helloworld</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="s">spec:</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="s">  host: helloworld.sample.svc.cluster.local</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="s">  trafficPolicy:</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="s">    connectionPool:</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="s">      http:</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="s">        maxRequestsPerConnection: 1</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="s">    loadBalancer:</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="s">      simple: ROUND_ROBIN</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="s">      localityLbSetting:</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="s">        enabled: true</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="s">        failover:</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="s">        - from: us-central1-a</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="s">          to: us-central1-b</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="s">    outlierDetection:</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="s">      consecutive5xxErrors: 1</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="s">      interval: 1s</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="s">      baseEjectionTime: 1m</span>
+<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="s">EOF</span>
 </code></pre></div>
-<p>Test failover by draining the listeners on the sidecar of the hello world pod in the primary zone:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="nb">exec</span> <span class="se">\</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n sample -l <span class="nv">app</span><span class="o">=</span>helloworld <span class="se">\</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>  -l <span class="nv">version</span><span class="o">=</span>v1 -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  -n sample -c istio-proxy -- curl -sSL -X POST <span class="m">127</span>.0.0.1:15000/drain_listeners
+<p>Next, call the <code>helloworld</code> service from the sleep pod on the primary cluster and see it favor the local instance (v1).</p>
+<h3 id="test-failover">Test failover<a class="headerlink" href="#test-failover" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Drain the listeners on the sidecar of the <code>helloworld</code> pod in the primary zone:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="nb">exec</span> <span class="se">\</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n sample -l <span class="nv">app</span><span class="o">=</span>helloworld <span class="se">\</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  -l <span class="nv">version</span><span class="o">=</span>v1 -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  -n sample -c istio-proxy -- curl -sSL -X POST <span class="m">127</span>.0.0.1:15000/drain_listeners
 </code></pre></div>
+</li>
+<li>
+<p>Make calls to the hellworld service from the sleep pod on the primary cluster once more, and watch it fail over to the endpoint running on the remote cluster (v2).</p>
+</li>
+</ol>
 
               
             </article>
