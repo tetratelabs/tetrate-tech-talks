@@ -2,7 +2,7 @@
 
 More specifically, [Install Primary-Remote](https://istio.io/latest/docs/setup/install/multicluster/primary-remote/).
 
-## Create the two clusters:
+## Create two clusters
 
 1. Primary, name "primary-cluster"
 
@@ -88,17 +88,19 @@ gcloud compute firewall-rules create istio-multicluster-test-pods \
     ```
 
 
-## Install Istio et al
+## Construct the mesh
 
-The main instructions to [install Primary-Remote](https://istio.io/latest/docs/setup/install/multicluster/primary-remote/) provide the next steps:
+The document [Install Primary-Remote](https://istio.io/latest/docs/setup/install/multicluster/primary-remote/) details the steps for constructing this mesh, which entails:
 
 1. Install Istio on the primary cluster
 1. Configure the east-west gateway
-1. Expose istiod
-1. Enable API server access to the remote cluster
+1. Expose istiod to the remote cluster
+1. Enable Kube API server access in the remote cluster
 1. Install Istio on the remote cluster
 
-Below is the adaptation of those steps to the specific cluster names used in this exercise.
+The [topology diagram](https://istio.io/latest/docs/setup/install/multicluster/primary-remote/arch.svg) will serve as a supporting reference as we build out the mesh.
+
+Below is the adaptation of the steps to the specific cluster names used in this exercise.
 
 ## Steps
 
@@ -109,7 +111,7 @@ export CTX_PRIMARY=gke_eitan-tetrate_us-central1-a_primary-cluster
 export CTX_REMOTE=gke_eitan-tetrate_us-central1-b_remote-cluster
 ```
 
-Generate the istio installation manifest file with the IstioOperator custom resource:
+Generate the Istio installation manifest file with the IstioOperator custom resource:
 
 ```shell
 cat <<EOF > primary-cluster.yaml
