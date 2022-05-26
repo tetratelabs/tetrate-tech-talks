@@ -229,9 +229,6 @@ spec:
       simple: ROUND_ROBIN
       localityLbSetting:
         enabled: true
-        failover:
-        - from: us-central1-a
-          to: us-central1-b
     outlierDetection:
       consecutive5xxErrors: 1
       interval: 1s
