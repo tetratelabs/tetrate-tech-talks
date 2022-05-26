@@ -226,8 +226,7 @@ spec:
 EOF
 ```
 
-Test failover by draining the listeners
-
+Test failover by draining the listeners on the sidecar of the hello world pod in the primary zone:
 
 ```shell
 kubectl --context="${CTX_CLUSTER1}" exec \
