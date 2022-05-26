@@ -25,6 +25,7 @@ nav:
   - index.md
   - Episode 8:
     - Description: episode8/index.md
+    - Introduction: episode8/introduction.md
   - Episode 9:
     - Description: episode9/index.md
   - Past Episodes:
