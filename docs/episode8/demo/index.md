@@ -198,6 +198,15 @@ Follow the instructions on the page to:
 - Deploy helloworld v1 to the primary cluster and v2 to the remote cluster.
 - Deploy the sleep pod to both clusters.
 
+These environment variables will help:
+
+```shell
+export CTX_CLUSTER1=gke_eitan-tetrate_us-central1-a_primary-cluster
+export CTX_CLUSTER2=gke_eitan-tetrate_us-central1-b_remote-cluster
+```
+
+
+
 ## Explore [locality load balancing](https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/)
 
 Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.
@@ -221,8 +230,8 @@ spec:
       localityLbSetting:
         enabled: true
         failover:
-        - from: us-central1/us-central1-a
-          to: us-central1/us-central1-b
+        - from: us-central1-a
+          to: us-central1-b
     outlierDetection:
       consecutive5xxErrors: 1
       interval: 1s
@@ -230,11 +239,17 @@ spec:
 EOF
 ```
 
-Test failover by draining the listeners on the sidecar of the hello world pod in the primary zone:
+Next, call the `helloworld` service from the sleep pod on the primary cluster and see it favor the local instance (v1).
 
-```shell
-kubectl --context="${CTX_PRIMARY}" exec \
-  "$(kubectl get pod --context="${CTX_PRIMARY}" -n sample -l app=helloworld \
-  -l version=v1 -o jsonpath='{.items[0].metadata.name}')" \
-  -n sample -c istio-proxy -- curl -sSL -X POST 127.0.0.1:15000/drain_listeners
-```
+### Test failover
+
+1. Drain the listeners on the sidecar of the `helloworld` pod in the primary zone:
+
+    ```shell
+    kubectl --context="${CTX_PRIMARY}" exec \
+      "$(kubectl get pod --context="${CTX_PRIMARY}" -n sample -l app=helloworld \
+      -l version=v1 -o jsonpath='{.items[0].metadata.name}')" \
+      -n sample -c istio-proxy -- curl -sSL -X POST 127.0.0.1:15000/drain_listeners
+    ```
+
+1. Make calls to the hellworld service from the sleep pod on the primary cluster once more, and watch it fail over to the endpoint running on the remote cluster (v2).
