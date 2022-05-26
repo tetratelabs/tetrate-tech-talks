@@ -38,7 +38,7 @@ ALL_CLUSTER_CIDRS=$(join_by , $(echo "${ALL_CLUSTER_CIDRS}"))
 ALL_CLUSTER_NETTAGS=$(gcloud compute instances list --format='value(tags.items.[0])' | sort | uniq)
 ALL_CLUSTER_NETTAGS=$(join_by , $(echo "${ALL_CLUSTER_NETTAGS}"))
 
-gcloud compute firewall-rules create istio-multicluster-test-pods \
+gcloud compute firewall-rules create istio-mesh-internal \
   --allow=tcp,udp,icmp,esp,ah,sctp \
   --direction=INGRESS \
   --priority=900 \
