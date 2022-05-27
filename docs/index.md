@@ -15,7 +15,8 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
 - [Episode 8](episode8/) - May 27 2022: **Istio Primary-Remote deployment model**
-- [Episode 9](episode9/) - June 3 2022: **About the "Certified Istio Administrator by Tetrate" (CIAT) exam, with guest Peter Jausovec**
+- [Episode 9](episode9/) - June 3 2022: **About the "Certified Istio Administrator by Tetrate" (CIAT) exam, with guest Peter Jausovec, from Tetrate**
+- Episode 10 - June 10 2022: **Discuss state of the art with Web Application Firewalls (WAF), with guest José Carlos Chavez, from Tetrate**
 
 Stay tuned as we line up additional guests and topics!
 

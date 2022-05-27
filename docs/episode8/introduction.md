@@ -41,6 +41,12 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 - [Tetrate Events](https://www.tetrate.io/events/)
 
 ---
+# Upcoming Episodes
+
+- Friday June 3 @ 9AM Pacific: Learn about the Certified Istio Administrator by Tetrate exam, with Peter Jausovec
+- Friday June 10 @ 9AM Pacific: Tetrand Profile, with José Carlos Chavez from R&D, on Web Application Firewalls (WAF)
+
+---
 # Istio Certification
 
 - [Certified Istio Administrator by Tetrate](https://academy.tetrate.io/courses/certified-istio-administrator)
