@@ -1004,45 +1004,46 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">ALL_CLUSTER_CIDRS</span><span class="o">=</span><span class="k">$(</span>gcloud container clusters list --format<span class="o">=</span><span class="s1">&#39;value(clusterIpv4Cidr)&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq<span class="k">)</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">ALL_CLUSTER_CIDRS</span><span class="o">=</span><span class="k">$(</span>join_by , <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_CIDRS</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">))</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="o">=</span><span class="k">$(</span>gcloud compute instances list --format<span class="o">=</span><span class="s1">&#39;value(tags.items.[0])&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq<span class="k">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="o">=</span><span class="k">$(</span>join_by , <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">))</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>gcloud compute firewall-rules create istio-mesh-internal <span class="se">\</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  --allow<span class="o">=</span>tcp,udp,icmp,esp,ah,sctp <span class="se">\</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  --direction<span class="o">=</span>INGRESS <span class="se">\</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  --priority<span class="o">=</span><span class="m">900</span> <span class="se">\</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  --source-ranges<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_CIDRS</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  --target-tags<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="si">}</span><span class="s2">&quot;</span> --quiet
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="o">=</span><span class="k">$(</span>gcloud compute instances list --format<span class="o">=</span><span class="s1">&#39;value(tags.items.[0])&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq<span class="k">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="o">=</span><span class="k">$(</span>join_by , <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gcloud compute firewall-rules create istio-mesh-internal <span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  --allow<span class="o">=</span>tcp,udp,icmp,esp,ah,sctp <span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  --direction<span class="o">=</span>INGRESS <span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  --priority<span class="o">=</span><span class="m">900</span> <span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  --source-ranges<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_CIDRS</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  --target-tags<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALL_CLUSTER_NETTAGS</span><span class="si">}</span><span class="s2">&quot;</span> --quiet
 </code></pre></div>
 <h2 id="create-the-ca-certificates"><a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/">Create the CA certificates</a><a class="headerlink" href="#create-the-ca-certificates" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Per the instructions, create the root ca.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk root-ca
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk root-ca
 </code></pre></div>
 </li>
 <li>
 <p>Create the intermediate certs for each of the two clusters:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk primary-cluster-cacerts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk primary-cluster-cacerts
 </code></pre></div>
 <p>And:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk remote-cluster-cacerts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make -f ../tools/certs/Makefile.selfsigned.mk remote-cluster-cacerts
 </code></pre></div>
 </li>
 <li>
 <p>Per the instructions, create the <code>cacerts</code> secret in each cluster.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kubectl create secret generic cacerts -n istio-system <span class="se">\</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>      --from-file<span class="o">=</span>primary-cluster/ca-cert.pem <span class="se">\</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>      --from-file<span class="o">=</span>primary-cluster/ca-key.pem <span class="se">\</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>      --from-file<span class="o">=</span>primary-cluster/root-cert.pem <span class="se">\</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      --from-file<span class="o">=</span>primary-cluster/cert-chain.pem
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>kubectl create secret generic cacerts -n istio-system <span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>      --from-file<span class="o">=</span>primary-cluster/ca-cert.pem <span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>      --from-file<span class="o">=</span>primary-cluster/ca-key.pem <span class="se">\</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>      --from-file<span class="o">=</span>primary-cluster/root-cert.pem <span class="se">\</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>      --from-file<span class="o">=</span>primary-cluster/cert-chain.pem
 </code></pre></div>
 <p>And:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>kubectl create secret generic cacerts -n istio-system <span class="se">\</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>      --from-file<span class="o">=</span>remote-cluster/ca-cert.pem <span class="se">\</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>      --from-file<span class="o">=</span>remote-cluster/ca-key.pem <span class="se">\</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      --from-file<span class="o">=</span>remote-cluster/root-cert.pem <span class="se">\</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      --from-file<span class="o">=</span>remote-cluster/cert-chain.pem
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>kubectl create secret generic cacerts -n istio-system <span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>      --from-file<span class="o">=</span>remote-cluster/ca-cert.pem <span class="se">\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>      --from-file<span class="o">=</span>remote-cluster/ca-key.pem <span class="se">\</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>      --from-file<span class="o">=</span>remote-cluster/root-cert.pem <span class="se">\</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>      --from-file<span class="o">=</span>remote-cluster/cert-chain.pem
 </code></pre></div>
 </li>
 </ol>
@@ -1059,63 +1060,63 @@
 <p>Below is the adaptation of the steps to the specific cluster names used in this exercise.</p>
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
 <p>Define environment variables for each of the two Kubernetes contexts:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">export</span> <span class="nv">CTX_PRIMARY</span><span class="o">=</span>gke_eitan-tetrate_us-central1-a_primary-cluster
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span> <span class="nv">CTX_REMOTE</span><span class="o">=</span>gke_eitan-tetrate_us-central1-b_remote-cluster
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span> <span class="nv">CTX_PRIMARY</span><span class="o">=</span>gke_eitan-tetrate_us-central1-a_primary-cluster
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">export</span> <span class="nv">CTX_REMOTE</span><span class="o">=</span>gke_eitan-tetrate_us-central1-b_remote-cluster
 </code></pre></div>
 <p>Generate the Istio installation manifest file with the IstioOperator custom resource:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cat <span class="s">&lt;&lt;EOF &gt; primary-cluster.yaml</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="s">apiVersion: install.istio.io/v1alpha1</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="s">kind: IstioOperator</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="s">spec:</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="s">  values:</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="s">    global:</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="s">      meshID: mesh1</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="s">      multiCluster:</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="s">        clusterName: primary-cluster</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="s">      network: network1</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="s">EOF</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cat <span class="s">&lt;&lt;EOF &gt; primary-cluster.yaml</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s">apiVersion: install.istio.io/v1alpha1</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s">kind: IstioOperator</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s">spec:</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s">  values:</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s">    global:</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="s">      meshID: mesh1</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="s">      multiCluster:</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="s">        clusterName: primary-cluster</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s">      network: network1</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>Install Istio on the primary cluster:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>istioctl install --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -f primary-cluster.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>istioctl install --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -f primary-cluster.yaml
 </code></pre></div>
 <p>Install the east-west gateway:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>samples/multicluster/gen-eastwest-gateway.sh <span class="se">\</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    --mesh mesh1 --cluster primary-cluster --network network1 <span class="p">|</span> <span class="se">\</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    istioctl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> install -y -f -
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>samples/multicluster/gen-eastwest-gateway.sh <span class="se">\</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    --mesh mesh1 --cluster primary-cluster --network network1 <span class="p">|</span> <span class="se">\</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    istioctl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> install -y -f -
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> get svc istio-eastwestgateway -n istio-system
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> get svc istio-eastwestgateway -n istio-system
 </code></pre></div>
 <p>Expose the control plane to cluster 2:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>kubectl apply --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n istio-system -f <span class="se">\</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    samples/multicluster/expose-istiod.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>kubectl apply --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n istio-system -f <span class="se">\</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    samples/multicluster/expose-istiod.yaml
 </code></pre></div>
 <p>Allow the control plane to communicate with the kube api server on the remote cluster:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>istioctl x create-remote-secret <span class="se">\</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_REMOTE</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    --name<span class="o">=</span>remote-cluster <span class="p">|</span> <span class="se">\</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    kubectl apply -f - --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>istioctl x create-remote-secret <span class="se">\</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_REMOTE</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    --name<span class="o">=</span>remote-cluster <span class="p">|</span> <span class="se">\</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    kubectl apply -f - --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p>Install Istio on the remote cluster, configured to talk to the control plane on the primary:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">export</span> <span class="nv">DISCOVERY_ADDRESS</span><span class="o">=</span><span class="k">$(</span>kubectl <span class="se">\</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    -n istio-system get svc istio-eastwestgateway <span class="se">\</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">export</span> <span class="nv">DISCOVERY_ADDRESS</span><span class="o">=</span><span class="k">$(</span>kubectl <span class="se">\</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    -n istio-system get svc istio-eastwestgateway <span class="se">\</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.loadBalancer.ingress[0].ip}&#39;</span><span class="k">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>cat <span class="s">&lt;&lt;EOF &gt; remote-cluster.yaml</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="s">apiVersion: install.istio.io/v1alpha1</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="s">kind: IstioOperator</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="s">spec:</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="s">  values:</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="s">    global:</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="s">      meshID: mesh1</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="s">      multiCluster:</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="s">        clusterName: remote-cluster</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="s">      network: network1</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="s">      remotePilotAddress: ${DISCOVERY_ADDRESS}</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="s">EOF</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cat <span class="s">&lt;&lt;EOF &gt; remote-cluster.yaml</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="s">apiVersion: install.istio.io/v1alpha1</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="s">kind: IstioOperator</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="s">spec:</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="s">  values:</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="s">    global:</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="s">      meshID: mesh1</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="s">      multiCluster:</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="s">        clusterName: remote-cluster</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="s">      network: network1</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="s">      remotePilotAddress: ${DISCOVERY_ADDRESS}</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>And finally:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>istioctl install --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_REMOTE</span><span class="si">}</span><span class="s2">&quot;</span> -f remote-cluster.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>istioctl install --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_REMOTE</span><span class="si">}</span><span class="s2">&quot;</span> -f remote-cluster.yaml
 </code></pre></div>
 <h2 id="verify-the-installation"><a href="https://istio.io/latest/docs/setup/install/multicluster/verify/">Verify the installation</a><a class="headerlink" href="#verify-the-installation" title="Permanent link">&para;</a></h2>
 <p>Follow the instructions on the page to:</p>
@@ -1124,42 +1125,42 @@
 <li>Deploy the sleep pod to both clusters.</li>
 </ul>
 <p>These environment variables will help:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER1</span><span class="o">=</span>gke_eitan-tetrate_us-central1-a_primary-cluster
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER2</span><span class="o">=</span>gke_eitan-tetrate_us-central1-b_remote-cluster
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER1</span><span class="o">=</span>gke_eitan-tetrate_us-central1-a_primary-cluster
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nb">export</span> <span class="nv">CTX_CLUSTER2</span><span class="o">=</span>gke_eitan-tetrate_us-central1-b_remote-cluster
 </code></pre></div>
 <h2 id="explore-locality-load-balancing">Explore <a href="https://istio.io/latest/docs/tasks/traffic-management/locality-load-balancing/">locality load balancing</a><a class="headerlink" href="#explore-locality-load-balancing" title="Permanent link">&para;</a></h2>
 <p>Want clients to favor instances located in the same region and zone, but to fail over to instances in other zones and regions.</p>
 <p>Configure a <a href="https://istio.io/latest/docs/reference/config/networking/destination-rule">DestinationRule</a> in the primary cluster:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> apply -n sample -f - <span class="s">&lt;&lt;EOF</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s">apiVersion: networking.istio.io/v1beta1</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s">kind: DestinationRule</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="s">metadata:</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="s">  name: helloworld</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="s">spec:</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="s">  host: helloworld.sample.svc.cluster.local</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="s">  trafficPolicy:</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="s">    connectionPool:</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="s">      http:</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="s">        maxRequestsPerConnection: 1</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="s">    loadBalancer:</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="s">      simple: ROUND_ROBIN</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="s">      localityLbSetting:</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="s">        enabled: true</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="s">    outlierDetection:</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="s">      consecutive5xxErrors: 1</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="s">      interval: 1s</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="s">      baseEjectionTime: 1m</span>
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="s">EOF</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> apply -n sample -f - <span class="s">&lt;&lt;EOF</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="s">apiVersion: networking.istio.io/v1beta1</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="s">kind: DestinationRule</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="s">metadata:</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="s">  name: helloworld</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="s">spec:</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="s">  host: helloworld.sample.svc.cluster.local</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="s">  trafficPolicy:</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="s">    connectionPool:</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="s">      http:</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="s">        maxRequestsPerConnection: 1</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="s">    loadBalancer:</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="s">      simple: ROUND_ROBIN</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="s">      localityLbSetting:</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="s">        enabled: true</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="s">    outlierDetection:</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="s">      consecutive5xxErrors: 1</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="s">      interval: 1s</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="s">      baseEjectionTime: 1m</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>Next, call the <code>helloworld</code> service from the sleep pod on the primary cluster and see it favor the local instance (v1).</p>
 <h3 id="test-failover">Test failover<a class="headerlink" href="#test-failover" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Drain the listeners on the sidecar of the <code>helloworld</code> pod in the primary zone:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="nb">exec</span> <span class="se">\</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n sample -l <span class="nv">app</span><span class="o">=</span>helloworld <span class="se">\</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  -l <span class="nv">version</span><span class="o">=</span>v1 -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  -n sample -c istio-proxy -- curl -sSL -X POST <span class="m">127</span>.0.0.1:15000/drain_listeners
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>kubectl --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="nb">exec</span> <span class="se">\</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>  <span class="s2">&quot;</span><span class="k">$(</span>kubectl get pod --context<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CTX_PRIMARY</span><span class="si">}</span><span class="s2">&quot;</span> -n sample -l <span class="nv">app</span><span class="o">=</span>helloworld <span class="se">\</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>  -l <span class="nv">version</span><span class="o">=</span>v1 -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>  -n sample -c istio-proxy -- curl -sSL -X POST <span class="m">127</span>.0.0.1:15000/drain_listeners
 </code></pre></div>
 </li>
 <li>
