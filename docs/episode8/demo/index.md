@@ -35,9 +35,14 @@ function join_by { local IFS="$1"; shift; echo "$*"; }
 
 ALL_CLUSTER_CIDRS=$(gcloud container clusters list --format='value(clusterIpv4Cidr)' | sort | uniq)
 ALL_CLUSTER_CIDRS=$(join_by , $(echo "${ALL_CLUSTER_CIDRS}"))
+```
+
+```shell
 ALL_CLUSTER_NETTAGS=$(gcloud compute instances list --format='value(tags.items.[0])' | sort | uniq)
 ALL_CLUSTER_NETTAGS=$(join_by , $(echo "${ALL_CLUSTER_NETTAGS}"))
+```
 
+```shell
 gcloud compute firewall-rules create istio-mesh-internal \
   --allow=tcp,udp,icmp,esp,ah,sctp \
   --direction=INGRESS \
