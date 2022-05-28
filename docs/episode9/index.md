@@ -1,5 +1,8 @@
 # Episode 9
 
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6936334265412440064/) | [YouTube](
+https://www.youtube.com/watch?v=mT2hQNip5a0)
+
 ## When
 
 Friday 2022.06.03 @ 9:00 AM Pacific time / 11:00 AM Central time
