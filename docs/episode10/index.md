@@ -1,5 +1,7 @@
 # Episode 10
 
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6937794807905869824/) | [YouTube](https://www.youtube.com/watch?v=sAdSt2jsyv8)
+
 ## When
 
 Friday 2022.06.10 @ 9:00 AM Pacific time / 11:00 AM Central time
