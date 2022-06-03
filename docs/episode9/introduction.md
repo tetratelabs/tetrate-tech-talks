@@ -44,6 +44,7 @@ Peter helped create the CIAT exam. At Tetrate, Peter is responsible for much of 
 ---
 # Links
 
+- [Tetrate Academy](https://academy.tetrate.io/)
 - [On the Tetrate blog..](https://www.tetrate.io/blog/how-istio-certification-can-give-you-a-cloud-native-edge/)
 - [Independent blog entry (medium)](https://medium.com/@rakeshkumarb08/my-preparation-log-and-experience-of-istio-exam-ciat-certified-istio-administrator-by-tetrate-9b7d8d4aed20)
 - [Past Istio Weekly episode on Tetrate's certification](https://www.youtube.com/watch?v=29JQA5jQ8OI)
