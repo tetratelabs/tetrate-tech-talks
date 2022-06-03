@@ -33,6 +33,9 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 
 Learn about the Certified Istio Administrator [by Tetrate] (CIAT) exam
 
+If you've been considering obtaining Tetrate's Istio certification exam, this episode is for you.
+Here we will explore this exam, from what it is, to how to register, what are the prerequisites, and ways to prepare and pass the certification exam.
+
 ---
 # Our Guest: Peter Jausovec, Tetrate
 
