@@ -23,9 +23,6 @@ extra_css:
   - css/custom.css
 nav:
   - index.md
-  - Episode 9:
-    - Description: episode9/index.md
-    - Introduction: episode9/introduction.md
   - Episode 10:
     - Description: episode10/index.md
   - Past Episodes:
@@ -56,6 +53,9 @@ nav:
     - Episode 8:
       - Description: episode8/index.md
       - Introduction: episode8/introduction.md
+    - Episode 9:
+      - Description: episode9/index.md
+      - Introduction: episode9/introduction.md
 markdown_extensions:
   - admonition
   - pymdownx.details
