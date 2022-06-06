@@ -15,6 +15,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
 - [Episode 10](episode10/) - June 10 2022: **Discuss state of the art with Web Application Firewalls (WAF), with guest José Carlos Chavez, from Tetrate**
+- [Episode 11](episode11/) - June 17 2022: **Let's talk service meshes with Kelsey Hightower**
 
 Stay tuned as we line up additional guests and topics!
 
