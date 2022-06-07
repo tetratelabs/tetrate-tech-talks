@@ -94,5 +94,3 @@ He is a consultant, trainer, and also author of the recently-published [WebAssem
 ..on our [Slack channel](https://tetrate-community.slack.com/):
 
 ##https://tetrate-community.slack.com/
-
-  - recent conversation about doing a demo on multi-cluster deployment

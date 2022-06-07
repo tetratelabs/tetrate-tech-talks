@@ -81,5 +81,3 @@ See [Tetrate Events](https://www.tetrate.io/events/) for details & to register.
 ..on our [Slack channel](https://tetrate-community.slack.com/):
 
 ##https://tetrate-community.slack.com/
-
-  - recent conversation about doing a demo on multi-cluster deployment

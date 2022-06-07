@@ -74,5 +74,3 @@ Recorded talk: [Scaling Istio](https://youtu.be/wcJPC_bXYBA) by Cathal Conroy of
 ..on our [Slack channel](https://tetrate-community.slack.com/):
 
 ##https://tetrate-community.slack.com/
-
-  - recent conversation about doing a demo on multi-cluster deployment

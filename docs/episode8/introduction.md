@@ -60,5 +60,3 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 ..on our [Slack channel](https://tetrate-community.slack.com/):
 
 ##https://tetrate-community.slack.com/
-
-  - recent conversation about doing a demo on multi-cluster deployment
