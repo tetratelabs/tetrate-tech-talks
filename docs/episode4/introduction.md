@@ -99,6 +99,4 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 ---
 # Join the conversation..
 
-..on our [Slack channel](https://tetrate-community.slack.com/):
-
-##https://tetrate-community.slack.com/
+Here is the [Invite URL](https://tetr8.io/tetrate-community) to our community Slack organization https://tetrate-community.slack.com/

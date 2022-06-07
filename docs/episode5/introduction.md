@@ -91,6 +91,4 @@ He is a consultant, trainer, and also author of the recently-published [WebAssem
 ---
 # Join the conversation..
 
-..on our [Slack channel](https://tetrate-community.slack.com/):
-
-##https://tetrate-community.slack.com/
+Here is the [Invite URL](https://tetr8.io/tetrate-community) to our community Slack organization https://tetrate-community.slack.com/

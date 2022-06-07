@@ -97,8 +97,4 @@ Register today!
 ---
 # Join the conversation..
 
-..on our [Slack channel](https://tetrate-community.slack.com/):
-
-##https://tetrate-community.slack.com/
-
-  - recent conversation about doing a demo on multi-cluster deployment
+Here is the [Invite URL](https://tetr8.io/tetrate-community) to our community Slack organization https://tetrate-community.slack.com/

@@ -75,9 +75,7 @@ We run these workshops periodically.  But the lab materials are free and availab
 ---
 # Join the conversation..
 
-..on our [Slack channel](https://tetrate-community.slack.com/):
-
-##https://tetrate-community.slack.com/
+Here is the [Invite URL](https://tetr8.io/tetrate-community) to our community Slack organization https://tetrate-community.slack.com/
 
 ---
 # Finally.. the episode
