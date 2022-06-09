@@ -1,5 +1,7 @@
 # Episode 11
 
+[LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:6940636830992121856/) | [YouTube](https://www.youtube.com/watch?v=P3nuGTbF-Is)
+
 ## When
 
 Friday 2022.06.17 @ 9:00 AM Pacific time / 11:00 AM Central time
