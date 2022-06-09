@@ -6,8 +6,6 @@
 
 Friday 2022.06.17 @ 9:00 AM Pacific time / 11:00 AM Central time
 
-LinkedIn & YouTube links will be posted in a few days.
-
 ## Guest: [Kelsey Hightower](https://github.com/kelseyhightower)
 
 Kelsey is one of these members of the Kubernetes community who needs no introduction.  Principal engineer at Google, co-author of the book _Kubernetes Up and Running_, also known for his tutorial [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way).
