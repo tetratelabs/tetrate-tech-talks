@@ -48,6 +48,7 @@ JC will introduce us to the subject of WAFs and the problems that they solve.
 
 - [ModSecurity](https://en.wikipedia.org/wiki/ModSecurity)
 - [OWASP Core Ruleset](https://coreruleset.org/)
+- [ModSecurity Wasm Filter](https://github.com/intel/modsecurity-wasm-filter)
 - [Blog: using WAF to detect Log4j exploit payload in request](https://www.tetrate.io/blog/tsb-log4j-security-announcement/)
 - [Blog: Bringing WAF to the service mesh](https://www.tetrate.io/blog/how-tetrate-service-bridge-protects-log4j-remote-execution/)
 - [TSB Golden Gate release cites WAF feature](https://www.tetrate.io/blog/tsb-golden-gate/)
