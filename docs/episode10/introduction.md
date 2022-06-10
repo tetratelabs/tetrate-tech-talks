@@ -38,7 +38,7 @@ In this episode we invite José Carlos Chávez (JC) to come talk to us about his
 ---
 ## Our Guest: [José Carlos Chávez](https://www.linkedin.com/in/jcchavezs/), Tetrate
 
-JC is an engineer at Tetrate working on Web Application Firewalls (WAFs).
+JC is an engineer at Tetrate working on integrating Web Application Firewalls (WAFs) into service meshes.  He is also a core member of the [Zipkin](https://zipkin.io/) team.
 
 JC will introduce us to the subject of WAFs and the problems that they solve.
 
