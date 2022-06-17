@@ -49,6 +49,7 @@ Kelsey is a Principal engineer at Google, co-author of the book _Kubernetes Up a
 - [Executing an app development strategy](https://www.youtube.com/watch?v=Ge5FbBILqm8)
 - [Cloud Engineering Summit 2021](https://www.youtube.com/watch?v=w6Dj2zf-39M)
 - [Early blog on Proxy Based Service Mesh](https://entzik.medium.com/proxy-based-service-mesh-96cd4b74c198)
+- [spiffe framework](https://spiffe.io/)
 
 ---
 # Recent June Events
