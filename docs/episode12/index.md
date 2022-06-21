@@ -1,6 +1,6 @@
 # Episode 12
 
-[LinkedIn]() | [YouTube]()
+<!-- [LinkedIn]() | [YouTube]() -->
 
 ## When
 
