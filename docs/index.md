@@ -14,6 +14,8 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
+- [Episode 12](episode12/) - June 24 2022: **A conversation with Josh Long**
+
 Stay tuned as we line up additional guests and topics!
 
 # Past Episodes:
