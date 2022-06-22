@@ -1,6 +1,6 @@
 # Episode 12
 
-<!-- [LinkedIn]() | [YouTube]() -->
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6945381653468889088/) | [YouTube](https://www.youtube.com/watch?v=0rMr-_R0OIY)
 
 ## When
 
