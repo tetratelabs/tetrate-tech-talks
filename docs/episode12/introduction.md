@@ -44,7 +44,10 @@ Josh Long is a Spring developer advocate, Java champion, author of numerous book
 # References
 
 - [Josh Long's personal site](https://joshlong.com/)
-- [Spring](https://spring.io/) | [Spring Boot](https://spring.io/projects/spring-boot) | [Spring Cloud](https://spring.io/projects/spring-cloud)
+- [Spring](https://spring.io/) & [Spring Cloud](https://spring.io/cloud)
+- [Inner loop development with Spring Boot and Kubernetes](https://springone.io/2021/sessions/inner-loop-development-with-spring-boot-on-kubernetes)
+- [Zuul @ Netflix](https://youtu.be/mHHHpxJuTAo) compared to [Envoy @ Lyft](https://youtu.be/s2-NfclRGak)
+- [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway)
 
 ---
 # Upcoming Episodes
