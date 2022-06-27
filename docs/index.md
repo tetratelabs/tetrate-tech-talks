@@ -14,7 +14,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
-- [Episode 12](episode12/) - June 24 2022: **A conversation with Josh Long**
+- [Episode 13](episode13/) - July 1 2022: **Learning Istio from the inside**
 
 Stay tuned as we line up additional guests and topics!
 
@@ -33,3 +33,4 @@ Stay tuned as we line up additional guests and topics!
 - [Episode 9](episode9/) - June 3 2022: **About the "Certified Istio Administrator by Tetrate" (CIAT) exam, with guest Peter Jausovec, from Tetrate**
 - [Episode 10](episode10/) - June 10 2022: **Discuss state of the art with Web Application Firewalls (WAF), with guest José Carlos Chavez, from Tetrate**
 - [Episode 11](episode11/) - June 17 2022: **Let's talk service meshes with Kelsey Hightower**
+- [Episode 12](episode12/) - June 24 2022: **A conversation with Josh Long**
