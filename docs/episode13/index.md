@@ -1,6 +1,6 @@
 # Episode 13
 
-<!-- [LinkedIn]() | [YouTube]() -->
+[LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:6945884915657830400/) | [YouTube](https://youtu.be/ueTXrMmWklY)
 
 ## When
 
