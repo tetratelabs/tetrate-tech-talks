@@ -15,6 +15,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
 - [Episode 13](episode13/) - July 1 2022: **Learning Istio from the inside**
+- [Episode 14](episode14/) - July 8 2022: **Tetrand profile: Liyi Huang**
 
 Stay tuned as we line up additional guests and topics!
 
