@@ -1,6 +1,6 @@
 # Episode 14
 
-<!-- [LinkedIn]() | [YouTube]() -->
+[LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:6948694550471221248/) | [YouTube](https://www.youtube.com/watch?v=N0A0RDKAT2A)
 
 ## When
 
@@ -14,7 +14,7 @@ Of course we will discuss service meshes, but also enterprise customers, adoptio
 
 ## Guest: [Liyi Huang](https://www.linkedin.com/in/liyi-huang-a7776238/)
 
-Liyi is a custom engineer at Tetrate, member of the customer success team, based in Canada.
+Liyi is an engineer at Tetrate, member of the customer success team, based in Canada.
 
 ## Your Host: [Eitan Suez](https://www.linkedin.com/in/eitan-suez-2336b26/)
 
