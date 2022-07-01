@@ -21,17 +21,17 @@ Stay tuned as we line up additional guests and topics!
 
 # Past Episodes:
 
-- [Episode 1](episode1/) - April 1 2022: **Onboarding VMs**, Guest: Bart van Bos
-- [Episode 2](episode2/) - April 8 2022:  **Upgrading Istio**
-- [Episode 3](episode3/) - April 15 2022.  **Adopting Istio at Salesforce** with Pratima Nambiar
-- [Episode 4](episode4/) - April 22 2022: **Exploring Kiali** with Lucas Ponce
-- Bye week - April 29 2022 is [IstioCon](https://events.istio.io/istiocon-2022/program/).
-- [Episode 5](episode5/) - May 6 2022: **Web Assembly** with Brian Sletten
-- [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
-- [**Special Episode**](envoygw/) - May 19 2022: **Fireside chat on Envoy Gateway**, with Matt Klein, Louis Ryan, Joe Beda, and Varun Talwar
-- [Episode 7](episode7/) - May 20 2022: **KubeCon report**
-- [Episode 8](episode8/) - May 27 2022: **Istio Primary-Remote deployment model**
-- [Episode 9](episode9/) - June 3 2022: **About the "Certified Istio Administrator by Tetrate" (CIAT) exam, with guest Peter Jausovec, from Tetrate**
-- [Episode 10](episode10/) - June 10 2022: **Discuss state of the art with Web Application Firewalls (WAF), with guest José Carlos Chavez, from Tetrate**
-- [Episode 11](episode11/) - June 17 2022: **Let's talk service meshes with Kelsey Hightower**
 - [Episode 12](episode12/) - June 24 2022: **A conversation with Josh Long**
+- [Episode 11](episode11/) - June 17 2022: **Let's talk service meshes with Kelsey Hightower**
+- [Episode 10](episode10/) - June 10 2022: **Discuss state of the art with Web Application Firewalls (WAF), with guest José Carlos Chavez, from Tetrate**
+- [Episode 9](episode9/) - June 3 2022: **About the "Certified Istio Administrator by Tetrate" (CIAT) exam, with guest Peter Jausovec, from Tetrate**
+- [Episode 8](episode8/) - May 27 2022: **Istio Primary-Remote deployment model**
+- [Episode 7](episode7/) - May 20 2022: **KubeCon report**
+- [**Special Episode**](envoygw/) - May 19 2022: **Fireside chat on Envoy Gateway**, with Matt Klein, Louis Ryan, Joe Beda, and Varun Talwar
+- [Episode 6](episode6/) - May 13 2022: **Kafka & Envoy** with Adam Kotwasinski, Workday
+- [Episode 5](episode5/) - May 6 2022: **Web Assembly** with Brian Sletten
+- Bye week - April 29 2022 is [IstioCon](https://events.istio.io/istiocon-2022/program/).
+- [Episode 4](episode4/) - April 22 2022: **Exploring Kiali** with Lucas Ponce
+- [Episode 3](episode3/) - April 15 2022.  **Adopting Istio at Salesforce** with Pratima Nambiar
+- [Episode 2](episode2/) - April 8 2022:  **Upgrading Istio**
+- [Episode 1](episode1/) - April 1 2022: **Onboarding VMs**, Guest: Bart van Bos
