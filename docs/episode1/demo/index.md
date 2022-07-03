@@ -224,7 +224,7 @@ Notice the workload entry show up in the listing.  This can take up to a minute.
 
 ## Exercise 2
 
-Although the ratings services does not need to call back into the mesh, we can manually test communication from the VM into the mesh.
+Although the ratings service does not need to call back into the mesh, we can manually test communication from the VM into the mesh.
 
 From the VM, run:
 
