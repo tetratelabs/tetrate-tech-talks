@@ -170,7 +170,10 @@ k apply -f workloadgroup.yaml -n ratings
 ## Generate VM artifacts
 
 ```shell
-istioctl x workload entry configure -f workloadgroup.yaml -o vm_files --autoregister
+istioctl x workload entry configure \
+  --file workloadgroup.yaml \
+  --output vm_files \
+  --autoregister
 ```
 
 Note: check that `vm_files/hosts` is not blank. If it is, it means you ran the command too soon.  Re-run it.
