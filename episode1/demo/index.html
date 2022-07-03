@@ -1627,7 +1627,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>k apply -f workloadgroup.yaml -n ratings
 </code></pre></div>
 <h2 id="generate-vm-artifacts">Generate VM artifacts<a class="headerlink" href="#generate-vm-artifacts" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl x workload entry configure -f workloadgroup.yaml -o vm_files --autoregister
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>istioctl x workload entry configure <span class="se">\</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  --file workloadgroup.yaml <span class="se">\</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  --output vm_files <span class="se">\</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>  --autoregister
 </code></pre></div>
 <p>Note: check that <code>vm_files/hosts</code> is not blank. If it is, it means you ran the command too soon.  Re-run it.</p>
 <h2 id="vm-configuration-recipe">VM configuration recipe<a class="headerlink" href="#vm-configuration-recipe" title="Permanent link">&para;</a></h2>
