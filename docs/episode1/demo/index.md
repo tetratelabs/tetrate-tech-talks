@@ -151,7 +151,7 @@ k create serviceaccount bookinfo-ratings -n ratings
 
 ## Create the WorkloadGroup
 
-A WorkloadGroup is a template for WorkloadEntity objects, see the [Istio reference](https://istio.io/latest/docs/reference/config/networking/workload-group/).
+A WorkloadGroup is a template for WorkloadEntry objects, see the [Istio reference](https://istio.io/latest/docs/reference/config/networking/workload-group/).
 
 ```shell
 istioctl x workload group create \
