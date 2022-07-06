@@ -25,6 +25,7 @@ nav:
   - index.md
   - Episode 14:
     - Description: episode14/index.md
+    - Introduction: episode14/introduction.md
   - Past Episodes:
     - Episode 13:
       - Description: episode13/index.md
@@ -44,8 +45,10 @@ nav:
     - Episode 8:
       - Description: episode8/index.md
       - Introduction: episode8/introduction.md
+      - Demo: episode8/demo/index.md
     - Episode 7:
       - Description: episode7/index.md
+      - Introduction: episode7/introduction.md
     - Fireside Chat:
       - Description: envoygw/index.md
     - Episode 6:
