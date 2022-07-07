@@ -42,6 +42,8 @@ Liyi will give a short presentation on how networking architectures have changed
 ---
 # References
 
+## Istio Security
+
 - [Istio Security Concepts](https://istio.io/latest/docs/concepts/security/)
 - [Understanding TLS Configuration in Istio](https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/)
 
@@ -50,8 +52,21 @@ Liyi will give a short presentation on how networking architectures have changed
 
 - [Istio Authorization Policy reference](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 
+## Tetrate enterprise offerings:
+
+- [Tetrate Service Bridge](https://www.tetrate.io/tetrate-service-bridge/)
+- [Tetrate Cloud](https://www.tetrate.io/tetrate-cloud/)
+- [Tetrate Istio Subscription](https://www.tetrate.io/tetrate-istio-subscription/)
+- [Tetrate Istio Distribution](https://tetratelabs.io/)
+
+[FIPS Certified Istio Distribution](https://www.tetrate.io/blog/tetrate-istio-distro-achieves-fips-certification/)
+
+## Tetrate Service Bridge
+
 - [Tetrate documentation portal](https://docs.tetrate.io/)
 - [Security concepts in Tetrate Service Bridge](https://docs.tetrate.io/service-bridge/1.4.x/en-us/concepts/security)
+
+
 
 ---
 # Upcoming Episodes
