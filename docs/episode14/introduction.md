@@ -54,12 +54,12 @@ Liyi will give a short presentation on how networking architectures have changed
 
 ## Tetrate enterprise offerings:
 
-- [Tetrate Service Bridge](https://www.tetrate.io/tetrate-service-bridge/)
-- [Tetrate Cloud](https://www.tetrate.io/tetrate-cloud/)
 - [Tetrate Istio Subscription](https://www.tetrate.io/tetrate-istio-subscription/)
 - [Tetrate Istio Distribution](https://tetratelabs.io/)
+- Blog: [FIPS certified Istio distribution](https://www.tetrate.io/blog/tetrate-istio-distro-achieves-fips-certification/)
+- [Tetrate Service Bridge](https://www.tetrate.io/tetrate-service-bridge/)
+- [Tetrate Cloud](https://www.tetrate.io/tetrate-cloud/)
 
-[FIPS Certified Istio Distribution](https://www.tetrate.io/blog/tetrate-istio-distro-achieves-fips-certification/)
 
 ## Tetrate Service Bridge
 
@@ -71,7 +71,13 @@ Liyi will give a short presentation on how networking architectures have changed
 ---
 # Upcoming Episodes
 
-- Friday July 15: Episode 15: *Michael Acostamadiedo* will demo configuring egress in Istio
+- Friday July 15: Episode 15: *Michael Acostamadiedo* will demo [configuring egress in Istio](https://www.tetrate.io/blog/istio-how-to-enforce-egress-traffic-using-istios-authorization-policies/)
+
+---
+# Random
+
+- [An Istio practicioner's blog](https://karlstoney.com/tag/istio/)
+- Mine the [IstioCon 2022 recorded sessions](https://www.youtube.com/playlist?list=PL7wB27eZmdffL2cyYauEuxcOTyGtSv4gy)
 
 ---
 # Istio Certification
