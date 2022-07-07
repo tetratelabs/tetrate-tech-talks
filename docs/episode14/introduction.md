@@ -29,16 +29,29 @@ If you're with us live, I invite you to say hello to everyone in the chat.
 - All past episodes are on our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTlOkjWDJBQYtjcc9WPk4E4F).
 
 ---
-# Our episode..
+# Our episode: Tetrand profile: [Liyi Huang](https://www.linkedin.com/in/liyi-huang-a7776238/), Tetrate
 
-## Tetrand profile: Liyi Huang
+This episode is our second in the series titled "Tetrand Profiles," designed to expose the work of our engineers.
 
-_tbd.._
+Liyi is an engineer at Tetrate, member of the customer success team, based in Canada.  Liyi has extensive experience with designing, implementing and troubleshooting networks, and with public cloud and hybrid cloud architecture.
+
+In this episode we speak with Liyi Huang, and learn more about his roles and responsibilities at Tetrate.
+
+Liyi will give a short presentation on how networking architectures have changed, and will provide a comparison between how things "used to be" before and after the introduction of service meshes such as Istio.
 
 ---
 # References
 
-- _tbd.._
+- [Istio Security Concepts](https://istio.io/latest/docs/concepts/security/)
+- [Understanding TLS Configuration in Istio](https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/)
+
+- [Identity & certificate management in Istio](https://istio.io/latest/docs/concepts/security/#pki)
+- [spiffe](https://spiffe.io/)
+
+- [Istio Authorization Policy reference](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+
+- [Tetrate documentation portal](https://docs.tetrate.io/)
+- [Security concepts in Tetrate Service Bridge](https://docs.tetrate.io/service-bridge/1.4.x/en-us/concepts/security)
 
 ---
 # Upcoming Episodes
