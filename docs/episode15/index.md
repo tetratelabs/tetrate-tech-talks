@@ -1,6 +1,6 @@
 # Episode 15
 
-<!-- [LinkedIn]() | [YouTube]() -->
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6951990789321232384/) | [YouTube](https://youtu.be/u-6Ejgeu8Xk)
 
 ## When
 
