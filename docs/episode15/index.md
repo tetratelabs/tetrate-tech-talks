@@ -12,7 +12,7 @@ Michael recently authored the blog entry: [How to enforce egress traffic using I
 
 I have invited Michael to give a short presentation and demonstration on egress in Istio.
 
-We will also take this opoprtunity to interview Michael and learn more about his role and responsibilities at Tetrate.
+We will also take this opportunity to interview Michael and learn more about his role and responsibilities at Tetrate.
 
 ## Guest: [Michael Acostamadiedo](https://www.linkedin.com/in/michaelacostamadiedo/)
 
