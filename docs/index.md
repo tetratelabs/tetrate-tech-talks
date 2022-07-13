@@ -15,6 +15,7 @@ Visit our [YouTube playlist](https://www.youtube.com/playlist?list=PLm51GPKRAmTl
 Most<sup>**</sup> episodes are scheduled for 9:00 AM Pacific time.
 
 - [Episode 15](episode15/) - July 15 2022: **Tetrand profile: Michael Acostamadiedo**
+- July 22, 29, and August 5: Summer break
 
 Stay tuned as we line up additional guests and topics!
 
