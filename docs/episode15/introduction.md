@@ -42,6 +42,11 @@ Michael will give a synopsis of his blog, and explain this particular feature of
 - [Istio Authorization Policy reference](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 - [Authorization Policy conditions](https://istio.io/latest/docs/reference/config/security/conditions/)
 
+### Operationalizing Istio
+
+- [Flagger](https://flagger.app/)
+- Recording: [Scaling Istio in large clusters](https://youtu.be/wcJPC_bXYBA)
+- [Karl Stoney's Istio writeups](https://karlstoney.com/tag/istio/)
 
 ### Tetrate enterprise offerings:
 
