@@ -2,7 +2,7 @@ demonstrate working with the Istio codebase and test suite.
 
 # Episode 16
 
-<!-- [LinkedIn]() | [YouTube]() -->
+[LinkedIn](https://www.linkedin.com/video/event/urn:li:ugcPost:6960962663120068608/) | [YouTube](https://youtu.be/D3KSL-4c_EM)
 
 ## When
 
