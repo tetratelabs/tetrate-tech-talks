@@ -43,9 +43,12 @@ Aditya has [previously spoken](https://youtu.be/o3Fi6nwuuiI) about the effective
 
 ## Upcoming Episodes
 
+We have the idea of conducting a third installment in this series of "Learning Istio from the Inside".
+The plan is to "move up" from learning how to navigate the codebase, to focusing on automated tests as a mechanism for learning the code and how it behaves.
+
 In this upcoming Fall 2022 season, we plan to lower the frequency of our Tech Talk episodes as we focus on some important projects that we will hopefully share with you upon completion.
 
-Stay tuned to this tech talks web site and our YouTube and LinkedIn channels for information and updates regarding upcoming episodes.
+Stay tuned to this tech talks web site and our [YouTube](https://www.youtube.com/tetrate) and [LinkedIn](https://www.linkedin.com/company/tetrate) channels for information and updates regarding upcoming episodes.
 
 
 ## Istio Certification
