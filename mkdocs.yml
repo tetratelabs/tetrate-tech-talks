@@ -25,6 +25,7 @@ nav:
   - index.md
   - Episode 16:
     - Description: episode16/index.md
+    - Introduction: episode16/introduction.md
   - Past Episodes:
     - Episode 15:
       - Description: episode15/index.md
