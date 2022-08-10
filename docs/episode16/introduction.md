@@ -40,6 +40,16 @@ In this episode, we continue the Journey with our guest, Aditya Prerepa, who dem
 
 Aditya has [previously spoken](https://youtu.be/o3Fi6nwuuiI) about the effectiveness of learning Istio by studying the code and its automated tests, as opposed to the more traditional method of reading a project's reference documentation.  We thought we'd ask Aditya to "show us how it's done."
 
+## References
+
+- [Goland IDE](https://www.jetbrains.com/go/) from JetBrains
+- [xDS protocol](https://www.envoyproxy.io/docs/envoy/v1.23.0/api-docs/xds_protocol)
+- [Cobra](https://cobra.dev/) framework for CLI apps in Go
+
+- [Introduction to gRPC with Golang](https://golangdocs.com/grpc-golang)
+- Book: [Distributed Services with Go](https://pragprog.com/titles/tjgo/distributed-services-with-go/)
+- Package [httptest](https://pkg.go.dev/net/http/httptest) utilities for HTTP testing.
+- [Gomega](https://onsi.github.io/gomega/) matchers library for unit testing
 
 ## Upcoming Episodes
 
