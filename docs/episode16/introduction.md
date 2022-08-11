@@ -34,7 +34,7 @@ Aditya Prerepa is a talented Tetrate engineer and Istio maintainer.  Aditya is e
 
 ## Our episode: Learn Istio from the Inside: part 2
 
-On July 1 2022 we recorded the first episode on the subject of [Learning Istio from the Inside](../episode13/), in which we demonstrated how to build and run Istio locally, and how to configure one's workstation with the Istio codebase for development.
+On July 1 2022 we recorded the first episode on the subject of [Learning Istio from the Inside](../../episode13/), in which we demonstrated how to build and run Istio locally, and how to configure one's workstation with the Istio codebase for development.
 
 In this episode, we continue the Journey with our guest, Aditya Prerepa, who demonstrates working with the Istio codebase.
 
