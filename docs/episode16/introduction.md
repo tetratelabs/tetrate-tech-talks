@@ -42,6 +42,7 @@ Aditya has [previously spoken](https://youtu.be/o3Fi6nwuuiI) about the effective
 
 ## References
 
+- [Istio main repository](https://github.com/istio/istio) on GitHub
 - [Goland IDE](https://www.jetbrains.com/go/) from JetBrains
 - [xDS protocol](https://www.envoyproxy.io/docs/envoy/v1.23.0/api-docs/xds_protocol)
 - [Cobra](https://cobra.dev/) framework for CLI apps in Go
