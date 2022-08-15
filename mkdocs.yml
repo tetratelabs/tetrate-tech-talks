@@ -23,10 +23,10 @@ extra_css:
   - css/custom.css
 nav:
   - index.md
-  - Episode 16:
-    - Description: episode16/index.md
-    - Introduction: episode16/introduction.md
   - Past Episodes:
+    - Episode 16:
+      - Description: episode16/index.md
+      - Introduction: episode16/introduction.md
     - Episode 15:
       - Description: episode15/index.md
       - Introduction: episode15/introduction.md
