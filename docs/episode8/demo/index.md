@@ -254,4 +254,4 @@ Next, call the `helloworld` service from the sleep pod on the primary cluster an
       -n sample -c istio-proxy -- curl -sSL -X POST 127.0.0.1:15000/drain_listeners
     ```
 
-1. Make calls to the hellworld service from the sleep pod on the primary cluster once more, and watch it fail over to the endpoint running on the remote cluster (v2).
+1. Make calls to the helloworld service from the sleep pod on the primary cluster once more, and watch it fail over to the endpoint running on the remote cluster (v2).
