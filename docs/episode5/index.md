@@ -1,5 +1,7 @@
 # [Episode 5](introduction.md)
 
+[YouTube](https://youtu.be/gigel-k-tss)
+
 ## When
 
 Friday 2022.05.06 @ 9:00 AM Pacific time

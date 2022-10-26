@@ -1,5 +1,7 @@
 # [Episode 6](introduction.md)
 
+[YouTube](https://youtu.be/2UfAgCSKPZo)
+
 ## Resources
 
 1. [Adam's presentation](https://www.slideshare.net/AdamKotwasinskiWorkd/envoy-and-kafka){target=_blank} (slideshare)
