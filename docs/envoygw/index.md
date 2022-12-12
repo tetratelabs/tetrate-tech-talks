@@ -18,7 +18,7 @@ Thursday 2022.05.19 @ 4:00 PM CEST (Valencia, Spain) / 7:00 AM Pacific.
 
 In this special instance of Tetrate's Tech Talks, we will be conducting a fireside chat on the [recently announced](https://blog.envoyproxy.io/introducing-envoy-gateway-ad385cc59532) Envoy Gateway project, with none other than Matt Klein, Louis Ryan, Varun Talwar, and Joe Beda.
 
-Here are some posts and articlces on the subject:
+Here are some posts and articles on the subject:
 
 - [Project GitHub repository](https://github.com/envoyproxy/gateway)
 - [Tetrate's blog post](https://www.tetrate.io/blog/the-gateway-to-a-new-frontier/)
